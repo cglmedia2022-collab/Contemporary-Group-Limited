@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,11 +27,29 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Adaptive styles based on scroll state
+  const buttonBorderClass = isScrolled
+    ? "border-foreground/20 text-foreground hover:bg-foreground/5"
+    : "border-white/30 text-white hover:bg-white/10";
+
+  const buttonActiveBorderClass = isScrolled
+    ? "border-foreground/80 bg-foreground/5 text-foreground"
+    : "border-white/80 bg-white/10 text-white";
+
+  const linkClass = isScrolled
+    ? "text-foreground/80 hover:text-foreground"
+    : "text-white/80 hover:text-white";
+
+  const logoTextClass = isScrolled ? "text-foreground" : "text-white";
+  const logoSubTextClass = isScrolled ? "text-foreground/50" : "text-white/50";
+
+  const arrowLineClass = isScrolled ? "bg-foreground" : "bg-white";
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12 py-6 flex items-center justify-between ${
         isScrolled
-          ? "bg-neutral-950/40 backdrop-blur-md shadow-sm border-b border-white/10"
+          ? "bg-neutral-50/70 dark:bg-neutral-950/45 backdrop-blur-md shadow-sm border-b border-neutral-200/30 dark:border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -42,8 +59,10 @@ export default function Navbar() {
           href="/"
           className={`px-6 py-2 rounded-full text-[10px] font-gotham uppercase tracking-widest transition-all duration-300 ${
             pathname === "/"
-              ? "bg-white text-black font-semibold"
-              : "border border-white/30 text-white hover:bg-white/10"
+              ? isScrolled
+                ? "bg-neutral-950 text-white dark:bg-white dark:text-black font-semibold shadow-sm"
+                : "bg-white text-black font-semibold"
+              : buttonBorderClass
           }`}
         >
           Home
@@ -56,10 +75,10 @@ export default function Navbar() {
           onMouseLeave={() => setIsAboutHovered(false)}
         >
           <button
-            className={`px-6 py-2 rounded-full text-[10px] font-gotham uppercase tracking-widest transition-all duration-300 flex items-center gap-2 ${
+            className={`px-6 py-2 rounded-full text-[10px] font-gotham uppercase tracking-widest transition-all duration-300 flex items-center gap-2 border ${
               pathname.startsWith("/about") || isAboutHovered
-                ? "border border-white/80 text-white bg-white/10"
-                : "border border-white/30 text-white hover:bg-white/10"
+                ? buttonActiveBorderClass
+                : buttonBorderClass
             }`}
           >
             About Us
@@ -83,7 +102,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
-                className="absolute top-full left-0 mt-2 w-64 bg-black/80 backdrop-blur-xl shadow-2xl rounded-2xl border border-white/10 overflow-hidden"
+                className="absolute top-full left-0 mt-2 w-64 bg-neutral-950/90 dark:bg-black/90 backdrop-blur-xl shadow-2xl rounded-2xl border border-white/10 overflow-hidden"
               >
                 <div className="py-2">
                   {ABOUT_US_LINKS.map((link) => (
@@ -104,20 +123,20 @@ export default function Navbar() {
 
         <Link
           href="/projects"
-          className={`px-6 py-2 rounded-full text-[10px] font-gotham uppercase tracking-widest transition-all duration-300 ${
+          className={`px-6 py-2 rounded-full text-[10px] font-gotham uppercase tracking-widest transition-all duration-300 border ${
             pathname.startsWith("/projects")
-              ? "border border-white/80 text-white bg-white/10"
-              : "border border-white/30 text-white hover:bg-white/10"
+              ? buttonActiveBorderClass
+              : buttonBorderClass
           }`}
         >
           Projects
         </Link>
         <Link
           href="/services"
-          className={`px-6 py-2 rounded-full text-[10px] font-gotham uppercase tracking-widest transition-all duration-300 ${
+          className={`px-6 py-2 rounded-full text-[10px] font-gotham uppercase tracking-widest transition-all duration-300 border ${
             pathname.startsWith("/services")
-              ? "border border-white/80 text-white bg-white/10"
-              : "border border-white/30 text-white hover:bg-white/10"
+              ? buttonActiveBorderClass
+              : buttonBorderClass
           }`}
         >
           Services
@@ -127,10 +146,10 @@ export default function Navbar() {
       {/* Center Logo */}
       <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3 group">
         <div className="flex flex-col text-left">
-          <span className="font-gotham font-bold text-lg md:text-xl leading-none text-white tracking-wider group-hover:text-brand-primary transition-colors">
+          <span className={`font-gotham font-bold text-lg md:text-xl leading-none tracking-wider group-hover:text-brand-primary transition-colors ${logoTextClass}`}>
             Contemporary
           </span>
-          <span className="font-sans text-[10px] tracking-[0.3em] text-white/50 uppercase mt-1 group-hover:text-white/80 transition-colors">
+          <span className={`font-sans text-[10px] tracking-[0.3em] uppercase mt-1 group-hover:text-brand-primary transition-colors ${logoSubTextClass}`}>
             Group Limited
           </span>
         </div>
@@ -140,22 +159,24 @@ export default function Navbar() {
       <nav className="hidden lg:flex items-center gap-8">
         <Link
           href="/careers"
-          className="text-[10px] font-gotham uppercase tracking-widest text-white/80 hover:text-white transition-colors"
+          className={`text-[10px] font-gotham uppercase tracking-widest transition-colors ${linkClass}`}
         >
           Careers
         </Link>
         <Link
           href="/media"
-          className="text-[10px] font-gotham uppercase tracking-widest text-white/80 hover:text-white transition-colors"
+          className={`text-[10px] font-gotham uppercase tracking-widest transition-colors ${linkClass}`}
         >
           Media
         </Link>
         <Link
           href="/contact"
-          className="text-[10px] font-gotham uppercase tracking-widest text-white hover:text-brand-primary transition-colors flex items-center gap-2 group"
+          className={`text-[10px] font-gotham uppercase tracking-widest transition-colors flex items-center gap-2 group ${
+            isScrolled ? "text-foreground hover:text-brand-primary" : "text-white hover:text-brand-primary"
+          }`}
         >
           Contact Us
-          <span className="w-6 h-px bg-white group-hover:bg-brand-primary group-hover:w-8 transition-all duration-300 relative">
+          <span className={`w-6 h-px group-hover:bg-brand-primary group-hover:w-8 transition-all duration-300 relative ${arrowLineClass}`}>
             <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t border-r border-current rotate-45 transform translate-x-px"></span>
           </span>
         </Link>
@@ -163,18 +184,16 @@ export default function Navbar() {
 
       {/* Mobile Menu Toggle */}
       <button
-        className="lg:hidden relative z-50 p-2 text-white focus:outline-none"
+        className={`lg:hidden relative z-50 p-2 focus:outline-none ${isScrolled ? "text-foreground" : "text-white"}`}
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-label="Toggle Menu"
       >
         <div className="w-6 h-5 flex flex-col justify-between">
           <span className={`block h-0.5 w-full bg-current transition-transform duration-300 origin-left ${isMobileMenuOpen ? "rotate-45 translate-x-1" : ""}`} />
-          <span className={`block h-0.5 w-full bg-current transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`} />
+          <span className={`block h-full w-full bg-current transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`} />
           <span className={`block h-0.5 w-full bg-current transition-transform duration-300 origin-left ${isMobileMenuOpen ? "-rotate-45 translate-x-1" : ""}`} />
         </div>
       </button>
-
-      {/* Mobile Menu logic ... omitted for brevity as the focus is desktop right now, but keeping the state to avoid errors */}
     </header>
   );
 }

@@ -40,7 +40,7 @@ export default function Projects() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                 <div>
                   <span className="font-sans text-[10px] uppercase tracking-wider text-white/50">Office</span>
@@ -63,7 +63,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="group cursor-pointer relative aspect-[4/3] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
+              className="group cursor-pointer relative aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
             >
               <Image
                 src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
@@ -72,7 +72,7 @@ export default function Projects() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                 <div>
                   <span className="font-sans text-[10px] uppercase tracking-wider text-white/50">Hospitality</span>
@@ -92,7 +92,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="group cursor-pointer relative aspect-[4/3] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
+              className="group cursor-pointer relative aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
             >
               <Image
                 src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80"
@@ -101,7 +101,7 @@ export default function Projects() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                 <div>
                   <span className="font-sans text-[10px] uppercase tracking-wider text-white/50">Residential</span>
@@ -124,7 +124,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="group cursor-pointer relative flex-grow min-h-[400px] lg:min-h-0 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
+              className="group cursor-pointer relative grow min-h-[400px] lg:min-h-0 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
             >
               <Image
                 src="/project-villa.png"
@@ -133,7 +133,7 @@ export default function Projects() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                 <div>
                   <span className="font-sans text-[10px] uppercase tracking-wider text-white/50">Luxury Villa</span>

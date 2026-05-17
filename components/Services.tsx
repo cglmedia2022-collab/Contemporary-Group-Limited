@@ -73,7 +73,7 @@ export default function Services() {
               className="group cursor-pointer space-y-4"
             >
               {/* Image Container with zoom hover */}
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+              <div className="relative aspect-4/5 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                 <Image
                   src={service.img}
                   alt={service.title}

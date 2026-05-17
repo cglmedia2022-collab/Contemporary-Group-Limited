@@ -71,7 +71,7 @@ export default function About() {
               Contemporary Group Limited (CGL) stands as a distinguished force within Nigeria’s construction landscape, orchestrating end-to-end solutions across the industry value chain. For over three decades, the Group has woven its legacy through more than 250 completed projects—each a testament to precision, resilience, and visionary craftsmanship.
             </p>
             <p className="font-sans text-xs text-foreground/50 leading-relaxed text-justify max-w-2xl italic border-l-2 border-brand-primary pl-4">
-              "Dedicated to creating the best building solutions for enduring value and industry-leading performance."
+              &quot;Dedicated to creating the best building solutions for enduring value and industry-leading performance.&quot;
             </p>
           </div>
 
@@ -98,7 +98,7 @@ export default function About() {
         </div>
 
         {/* SECTION 2: Core Pillars (Pasted Image Layout) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-32 pt-20 border-t border-neutral-200/50 dark:border-neutral-800/50">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-32 pt-20">
           
           {/* Left Column: Heading, description, and large transparent wireframe */}
           <div className="lg:col-span-7 flex flex-col justify-between h-full gap-12">
@@ -121,7 +121,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="relative w-full aspect-[2/1] max-w-lg dark:brightness-100 brightness-90 hover:scale-102 transition-transform duration-500 select-none pointer-events-none"
+              className="relative w-full aspect-2/1 max-w-lg dark:brightness-100 brightness-90 hover:scale-102 transition-transform duration-500 select-none pointer-events-none"
             >
               <Image
                 src="/pillars-structure.png"
@@ -145,7 +145,7 @@ export default function About() {
                 className="flex items-center gap-6 p-4 rounded-3xl bg-neutral-950 text-white border border-white/10 hover:border-brand-primary transition-all duration-300 shadow-xl group cursor-default"
               >
                 {/* Left: Cropped B&W Image */}
-                <div className="relative w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 bg-neutral-900 border border-white/10">
+                <div className="relative w-20 h-20 rounded-2xl overflow-hidden shrink-0 bg-neutral-900 border border-white/10">
                   <Image
                     src={pillar.img}
                     alt={pillar.title}
@@ -171,7 +171,7 @@ export default function About() {
         </div>
 
         {/* SECTION 3: Strategic Subsidiaries (Redesigned with Photos) */}
-        <div className="pt-20 border-t border-neutral-200/50 dark:border-neutral-800/50 space-y-16">
+        <div className="pt-20 space-y-16">
           <div className="space-y-4">
             <span className="font-gotham text-xs uppercase tracking-widest text-brand-primary font-semibold">
               Corporate ecosystem
@@ -193,7 +193,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: i * 0.15 }}
-                className="group cursor-pointer relative aspect-[4/5] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex flex-col justify-end p-6 border border-neutral-200/20 dark:border-neutral-800/20"
+                className="group cursor-pointer relative aspect-4/5 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex flex-col justify-end p-6 border border-neutral-200/20 dark:border-neutral-800/20"
               >
                 {/* Background Image with hover scale */}
                 <Image
@@ -205,7 +205,7 @@ export default function About() {
                 />
                 
                 {/* Dark Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent group-hover:via-neutral-950/60 transition-all duration-300" />
+                <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/40 to-transparent group-hover:via-neutral-950/60 transition-all duration-300" />
                 
                 {/* Info Content */}
                 <div className="relative z-10 space-y-2 translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
