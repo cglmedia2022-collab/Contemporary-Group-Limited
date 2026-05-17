@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Brand Colors extracted from logo */
+  --color-brand-primary: #d2ae6d;
+  --color-brand-light: #e5c998;
+  --color-brand-dark: #a98548;
+  --color-brand-accent: #f2d9a6;
+
+  /* Neutrals */
+  --color-neutral-50: #fbfaf9;
+  --color-neutral-100: #f5f3f0;
+  --color-neutral-200: #e6e2db;
+  --color-neutral-800: #2c2a26;
+  --color-neutral-900: #1a1917;
+  --color-neutral-950: #0f0e0d;
+
+  /* Semantic */
+  --color-background-light: var(--color-neutral-50);
+  --color-foreground-light: var(--color-neutral-900);
+  
+  --color-background-dark: var(--color-neutral-950);
+  --color-foreground-dark: var(--color-neutral-100);
+
+  /* Typography */
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-montserrat: var(--font-montserrat), sans-serif;
+  --font-gotham: "Gotham", var(--font-montserrat), sans-serif;
+  --font-futura: "Futura", var(--font-montserrat), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: var(--color-background-light);
+  --foreground: var(--color-foreground-light);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-background-dark);
+    --foreground: var(--color-foreground-dark);
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base headings style for architectural feel */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-gotham);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Subtle accent for Futura usage (e.g. overlines, subheadings) */
+.font-futura {
+  font-family: var(--font-futura);
 }
