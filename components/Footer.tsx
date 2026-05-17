@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-background text-foreground border-t border-neutral-200 dark:border-neutral-800 transition-colors duration-300">
+    <footer className="w-full bg-[#f5f3f0]/50 text-neutral-800 border-t border-neutral-200/60 transition-colors duration-300">
       <div className="container mx-auto px-6 md:px-12 lg:px-24 pt-20 pb-10 flex flex-col justify-between min-h-[50vh]">
         
         {/* Top Section */}
@@ -72,14 +72,14 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="text-[9.5vw] font-gotham font-extrabold text-foreground dark:text-white uppercase tracking-tighter leading-none"
+            className="text-[9.5vw] font-gotham font-extrabold text-neutral uppercase tracking-tighter leading-none"
           >
             CONTEMPORARY
           </motion.h2>
         </div>
 
         {/* Bottom Section */}
-        <div className="w-full border-t border-neutral-200/50 dark:border-neutral-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="w-full border-t border-neutral-200/40 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo Name */}
           <div className="flex items-center gap-3">
             <div className="flex flex-col text-left">

@@ -34,13 +34,6 @@
   --foreground: var(--color-foreground-light);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--color-background-dark);
-    --foreground: var(--color-foreground-dark);
-  }
-}
-
 body {
   background-color: var(--background);
   color: var(--foreground);

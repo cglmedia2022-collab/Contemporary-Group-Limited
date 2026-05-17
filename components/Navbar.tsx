@@ -49,7 +49,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12 py-6 flex items-center justify-between ${
         isScrolled
-          ? "bg-neutral-50/70 dark:bg-neutral-950/45 backdrop-blur-md shadow-sm border-b border-neutral-200/30 dark:border-white/10"
+          ? "bg-[#fbfaf9]/85 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
@@ -60,7 +60,7 @@ export default function Navbar() {
           className={`px-6 py-2 rounded-full text-[10px] font-gotham uppercase tracking-widest transition-all duration-300 ${
             pathname === "/"
               ? isScrolled
-                ? "bg-neutral-950 text-white dark:bg-white dark:text-black font-semibold shadow-sm"
+                ? "bg-neutral-900 text-white font-semibold shadow-sm"
                 : "bg-white text-black font-semibold"
               : buttonBorderClass
           }`}
@@ -102,14 +102,14 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
-                className="absolute top-full left-0 mt-2 w-64 bg-neutral-950/90 dark:bg-black/90 backdrop-blur-xl shadow-2xl rounded-2xl border border-white/10 overflow-hidden"
+                className="absolute top-full left-0 mt-2 w-64 bg-white border border-neutral-200/50 shadow-2xl rounded-2xl overflow-hidden"
               >
                 <div className="py-2">
                   {ABOUT_US_LINKS.map((link) => (
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="block px-6 py-3 text-xs font-sans text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+                      className="block px-6 py-3 text-xs font-sans text-neutral-600 hover:text-neutral-950 hover:bg-neutral-100/50 transition-colors"
                       onClick={() => setIsAboutHovered(false)}
                     >
                       {link.name}
