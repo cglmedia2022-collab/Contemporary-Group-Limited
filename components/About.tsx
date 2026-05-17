@@ -142,10 +142,10 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: i * 0.2 }}
-                className="flex items-center gap-6 p-4 rounded-3xl bg-neutral-950 text-white border border-white/10 hover:border-brand-primary transition-all duration-300 shadow-xl group cursor-default"
+                className="flex items-center gap-6 p-4 rounded-3xl bg-white text-black border border-black/10 hover:border-brand-primary transition-all duration-300 group cursor-default"
               >
                 {/* Left: Cropped B&W Image */}
-                <div className="relative w-20 h-20 rounded-2xl overflow-hidden shrink-0 bg-neutral-900 border border-white/10">
+                <div className="relative w-20 h-20 rounded-2xl overflow-hidden shrink-0 bg-neutral-900">
                   <Image
                     src={pillar.img}
                     alt={pillar.title}
@@ -160,7 +160,7 @@ export default function About() {
                   <h4 className="font-gotham text-xs uppercase tracking-wider text-brand-primary font-bold">
                     {pillar.title}
                   </h4>
-                  <p className="font-sans text-[11px] text-white/70 leading-relaxed text-justify">
+                  <p className="font-sans text-[11px] text-black leading-relaxed text-justify">
                     {pillar.desc}
                   </p>
                 </div>
@@ -193,7 +193,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: i * 0.15 }}
-                className="group cursor-pointer relative aspect-4/5 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex flex-col justify-end p-6 border border-neutral-200/20 dark:border-neutral-800/20"
+                className="group cursor-pointer relative aspect-4/5 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex flex-col justify-end p-6"
               >
                 {/* Background Image with hover scale */}
                 <Image
