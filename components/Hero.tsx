@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 import { motion } from "framer-motion";
+import bg from "../public/State-secretariat-4.png";
+import bg_fg from "../public/State-secretariat-4-fg.png";
 
 const playfair = Playfair_Display({ 
   subsets: ["latin"], 
@@ -17,19 +19,19 @@ export default function Hero() {
       {/* LAYER 0: Background Image */}
       <motion.div 
         initial={{ y: "15vh", opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={{ y: 0, opacity: .7 }}
         transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-0 z-0"
       >
         <Image
-          src="/State-secretariat-4.png"
+          src={bg}
           alt="Delta State Secretariat Complex Background"
           fill
           className="object-cover object-center"
           priority
         />
         {/* Subtle vignette / dark gradient focusing on the bottom for readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/10 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-neutral-950/90 via-neutral-950/10 to-transparent" />
       </motion.div>
 
       {/* LAYER 1: Massive Typography (Behind the building) */}
@@ -54,7 +56,7 @@ export default function Hero() {
         className="absolute inset-0 z-20 pointer-events-none"
       >
         <Image
-          src="/State-secretariat-4-fg.png"
+          src={bg_fg}
           alt="Delta State Secretariat Complex Foreground"
           fill
           className="object-cover object-center"
@@ -87,8 +89,8 @@ export default function Hero() {
             className="relative"
           >
             {/* Decorative line mimicking inspiration */}
-            <div className="absolute -top-12 left-8 w-[1px] h-12 bg-white/40 hidden lg:block" />
-            <div className="absolute -top-12 left-8 w-1.5 h-1.5 rounded-full bg-white hidden lg:block -translate-x-[2px]" />
+            <div className="absolute -top-12 left-8 w-px h-12 bg-white/40 hidden lg:block" />
+            <div className="absolute -top-12 left-8 w-1.5 h-1.5 rounded-full bg-white hidden lg:block translate-x-[-2px]" />
 
             <div className="p-6 rounded-2xl bg-neutral-950/30 backdrop-blur-md border border-white/10 text-white/90 min-w-[320px]">
               <div className="space-y-2 text-xs">

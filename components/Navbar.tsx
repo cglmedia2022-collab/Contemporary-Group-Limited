@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -155,7 +155,7 @@ export default function Navbar() {
           className="text-[10px] font-gotham uppercase tracking-widest text-white hover:text-brand-primary transition-colors flex items-center gap-2 group"
         >
           Contact Us
-          <span className="w-6 h-[1px] bg-white group-hover:bg-brand-primary group-hover:w-8 transition-all duration-300 relative">
+          <span className="w-6 h-px bg-white group-hover:bg-brand-primary group-hover:w-8 transition-all duration-300 relative">
             <span className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t border-r border-current rotate-45 transform translate-x-px"></span>
           </span>
         </Link>

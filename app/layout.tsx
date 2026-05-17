@@ -10,8 +10,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Contemporary Group Limited | Architectural Firm",
-  description: "Top-notch professional architectural design and services.",
+  title: "Contemporary Group Limited | Leading Architectural & Construction Firm in Nigeria",
+  description: "With over 30 years of excellence, Contemporary Group Limited is Nigeria's premier architectural consultancy and property development group. Discover our legacy of 200+ landmark projects.",
 };
 
 export default function RootLayout({
