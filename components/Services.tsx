@@ -7,25 +7,25 @@ export default function Services() {
   const services = [
     {
       num: "01",
-      title: "Arch Design",
+      title: "Architectural Design",
       desc: "From initial concept development, visual scripting, and schematic layout plans.",
       img: "/service-architecture.png"
     },
     {
       num: "02",
-      title: "Interior Design",
+      title: "Interior Architecture",
       desc: "Creating bespoke, cohesive interior spaces with meticulous attention to detail.",
       img: "/service-interior.png"
     },
     {
       num: "03",
-      title: "Urban Planning",
+      title: "Urban Masterplanning",
       desc: "Designing the fluid spaces between outdoor landscape elements and modern structures.",
       img: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=800&q=80"
     },
     {
       num: "04",
-      title: "Project Manage",
+      title: "Design Management & Delivery",
       desc: "Overseeing, auditing, and executing technical precision across all construction phases.",
       img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
     }
@@ -42,7 +42,7 @@ export default function Services() {
               Our Capabilities
             </span>
             <h2 className="font-gotham text-3xl md:text-4xl font-extrabold tracking-tight">
-              Services We Provide
+              Architectural &amp; Design Capabilities
             </h2>
           </div>
           

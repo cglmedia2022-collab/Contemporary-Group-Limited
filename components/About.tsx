@@ -6,25 +6,25 @@ import { motion } from "framer-motion";
 export default function About() {
   const stats = [
     { number: "30+", label: "Years of Collaborative Excellence" },
-    { number: "250+", label: "Landmark Developments Completed" },
+    { number: "250+", label: "Iconic Architectural Masterworks" },
     { number: "5", label: "Strategic Business Units" },
     { number: "2", label: "Global Operations (Nigeria & Canada)" }
   ];
 
   const pillars = [
     {
-      title: "Highest Quality Standards",
-      desc: "We adhere to rigorous international benchmarks in every design and construction phase.",
+      title: "Visionary Spatial Design",
+      desc: "We weave spatial aesthetics and functional harmony into every draft, creating landmarks of architectural poetry.",
       img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=300&q=80"
     },
     {
-      title: "Exceptional Safety Specifications",
-      desc: "Safety is not just a protocol; it is the foundation of our operational philosophy.",
+      title: "Rigorous Technical Precision",
+      desc: "Bridging beautiful design with advanced structural engineering to guarantee flawless, world-class precision.",
       img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=300&q=80"
     },
     {
-      title: "Modern Technical Expertise",
-      desc: "Leveraging cutting-edge technology and sustainable practices to build for the future.",
+      title: "Sustainable Modern Innovation",
+      desc: "Integrating biophilic principles and smart-energy designs to build low-carbon, future-ready ecosystems.",
       img: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=300&q=80"
     }
   ];
@@ -64,14 +64,14 @@ export default function About() {
               About the Group
             </span>
             <h2 className="font-gotham text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-              A Legacy of Innovation <br />
-              <span className="text-brand-primary">&amp; Integrity.</span>
+              A Legacy of Visionary <br />
+              <span className="text-brand-primary">Architecture &amp; Design Integrity.</span>
             </h2>
             <p className="font-sans text-sm text-foreground/70 leading-relaxed text-justify max-w-2xl">
-              Contemporary Group Limited (CGL) stands as a distinguished force within Nigeria’s construction landscape, orchestrating end-to-end solutions across the industry value chain. For over three decades, the Group has woven its legacy through more than 250 completed projects—each a testament to precision, resilience, and visionary craftsmanship.
+              Contemporary Group Limited (CGL) stands as a titan of architectural brilliance within Nigeria&apos;s built environment. For over three decades, we have anchored our legacy in visionary spatial design, conceptual draftsmanship, and high-fidelity planning—shaping structural masterworks that stand as benchmarks of aesthetic and technical excellence.
             </p>
             <p className="font-sans text-xs text-foreground/50 leading-relaxed text-justify max-w-2xl italic border-l-2 border-brand-primary pl-4">
-              &quot;Dedicated to creating the best building solutions for enduring value and industry-leading performance.&quot;
+              &quot;Dedicated to creating exceptional architectural masterworks that unite spatial poetry with enduring, high-performance structural engineering.&quot;
             </p>
           </div>
 
@@ -107,11 +107,11 @@ export default function About() {
                 Our Foundation
               </span>
               <h2 className="font-gotham text-3xl md:text-4xl font-extrabold tracking-tight">
-                Building for Enduring <br />
-                <span className="text-brand-primary">Value &amp; Performance</span>
+                Drafting for Enduring <br />
+                <span className="text-brand-primary">Value &amp; Space Mastery</span>
               </h2>
               <p className="font-sans text-sm text-foreground/60 leading-relaxed text-justify max-w-xl">
-                Through its strategic pillars, CGL delivers an integrated suite of services that harmonize design excellence, sustainable development, and operational efficiency. We champioin innovation while honoring the timeless principles that define exceptional construction.
+                At our core, we believe that outstanding spaces start with bold, purposeful drawings. Our architectural pillars define our blueprint from initial sketch to physical completion.
               </p>
             </div>
 

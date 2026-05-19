@@ -16,7 +16,7 @@ export default function Footer() {
               Experience Liftoff
             </h3>
             <p className="font-sans text-xs text-foreground/50 mt-2 leading-relaxed">
-              Pioneering iconic structures and contemporary spaces that stand the test of time.
+              Pioneering architectural masterpieces and iconic spaces that redefine contemporary horizons.
             </p>
           </div>
 
