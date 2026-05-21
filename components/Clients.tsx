@@ -3,8 +3,33 @@
 import Image from "next/image";
 
 export default function Clients() {
-  // We extracted 24 logos. Split them into two rows of 12.
-  const allLogos = Array.from({ length: 24 }, (_, i) => `/clients/client-${i + 1}.png`);
+  // Use the actual file names from the public/clients directory
+  const allLogos = [
+    "9mobile.webp",
+    "Bayesa state.jpg",
+    "Chevron.png",
+    "Conoil.png",
+    "Council Of Lagel Education.webp",
+    "Ecobank.png",
+    "Enugu_state.jpg",
+    "Equitorial Trust Bank.jpg",
+    "Fedral Government Nigeria.jpg",
+    "FirstBank.png",
+    "GT Bank.png",
+    "Glo.png",
+    "Gombe-state.jpg",
+    "Lagos.png",
+    "Leventis-Logo.png",
+    "Mainstreet Microfinance bank.avif",
+    "NSIA-Insurance.png",
+    "Northwest.png",
+    "Ogun state.png",
+    "Sterling_Bank_Logo.png",
+    "Vodafone.png",
+    "Zenith-Bank-logo.png",
+    "cakasa-logo.png",
+    "delta-state-government.png"
+  ].map(file => `/clients/${file}`);
   const topRowLogos = allLogos.slice(0, 12);
   const bottomRowLogos = allLogos.slice(12, 24);
 
@@ -26,12 +51,12 @@ export default function Clients() {
         <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-neutral-50 to-transparent z-10 pointer-events-none" />
 
         {/* Row 1: Scrolling Left to Right (animate-marquee-right) */}
-        <div className="flex w-[200%] animate-marquee-right hover:[animation-play-state:paused]">
-          <div className="flex w-1/2 justify-around items-center px-4">
+        <div className="flex w-max animate-marquee-right hover:[animation-play-state:paused]">
+          <div className="flex items-center gap-6 pr-6">
             {topRowLogos.map((logo, idx) => (
               <div 
                 key={`top1-${idx}`} 
-                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0 mx-3"
+                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0"
               >
                 <Image
                   src={logo}
@@ -43,11 +68,11 @@ export default function Clients() {
               </div>
             ))}
           </div>
-          <div className="flex w-1/2 justify-around items-center px-4">
+          <div className="flex items-center gap-6 pr-6">
             {topRowLogos.map((logo, idx) => (
               <div 
                 key={`top2-${idx}`} 
-                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0 mx-3"
+                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0"
               >
                 <Image
                   src={logo}
@@ -62,12 +87,12 @@ export default function Clients() {
         </div>
 
         {/* Row 2: Scrolling Right to Left (animate-marquee-left) */}
-        <div className="flex w-[200%] animate-marquee-left hover:[animation-play-state:paused]">
-          <div className="flex w-1/2 justify-around items-center px-4">
+        <div className="flex w-max animate-marquee-left hover:[animation-play-state:paused]">
+          <div className="flex items-center gap-6 pr-6">
             {bottomRowLogos.map((logo, idx) => (
               <div 
                 key={`bottom1-${idx}`} 
-                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0 mx-3"
+                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0"
               >
                 <Image
                   src={logo}
@@ -79,11 +104,11 @@ export default function Clients() {
               </div>
             ))}
           </div>
-          <div className="flex w-1/2 justify-around items-center px-4">
+          <div className="flex items-center gap-6 pr-6">
             {bottomRowLogos.map((logo, idx) => (
               <div 
                 key={`bottom2-${idx}`} 
-                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0 mx-3"
+                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0"
               >
                 <Image
                   src={logo}
