@@ -149,7 +149,7 @@ export default function Navbar() {
           <span className={`font-gotham font-bold text-lg md:text-xl leading-none tracking-wider group-hover:text-brand-primary transition-colors ${logoTextClass}`}>
             Contemporary
           </span>
-          <span className={`font-sans text-[10px] tracking-[0.3em] uppercase mt-1 group-hover:text-brand-primary transition-colors ${logoSubTextClass}`}>
+          <span className={`font-sans text-center text-[10px] tracking-[0.3em] uppercase mt-1 group-hover:text-brand-primary transition-colors ${logoSubTextClass}`}>
             Group Limited
           </span>
         </div>
