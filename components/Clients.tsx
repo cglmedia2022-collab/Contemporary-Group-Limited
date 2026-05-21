@@ -34,7 +34,7 @@ export default function Clients() {
   const bottomRowLogos = allLogos.slice(12, 24);
 
   return (
-    <section className="py-24 bg-neutral-50 overflow-hidden relative border-t border-neutral-200/50">
+    <section className="py-24 bg-neutral-50 overflow-hidden relative">
       <div className="container mx-auto px-6 mb-16 text-center">
         <h2 className="font-gotham text-2xl md:text-3xl font-extrabold tracking-tight text-neutral-900">
           Some of our valuable clients
@@ -45,10 +45,10 @@ export default function Clients() {
       <div className="relative w-full flex flex-col gap-6 select-none">
         
         {/* Left Gradient Fade */}
-        <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-neutral-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 left-0 w-32 bg-linear-to-r from-neutral-50 to-transparent z-10 pointer-events-none" />
         
         {/* Right Gradient Fade */}
-        <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-neutral-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-32 bg-linear-to-l from-neutral-50 to-transparent z-10 pointer-events-none" />
 
         {/* Row 1: Scrolling Left to Right (animate-marquee-right) */}
         <div className="flex w-max animate-marquee-right hover:[animation-play-state:paused]">
@@ -56,7 +56,7 @@ export default function Clients() {
             {topRowLogos.map((logo, idx) => (
               <div 
                 key={`top1-${idx}`} 
-                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0"
+                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 shrink-0"
               >
                 <Image
                   src={logo}
@@ -72,7 +72,7 @@ export default function Clients() {
             {topRowLogos.map((logo, idx) => (
               <div 
                 key={`top2-${idx}`} 
-                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0"
+                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 shrink-0"
               >
                 <Image
                   src={logo}
@@ -92,7 +92,7 @@ export default function Clients() {
             {bottomRowLogos.map((logo, idx) => (
               <div 
                 key={`bottom1-${idx}`} 
-                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0"
+                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 shrink-0"
               >
                 <Image
                   src={logo}
@@ -108,7 +108,7 @@ export default function Clients() {
             {bottomRowLogos.map((logo, idx) => (
               <div 
                 key={`bottom2-${idx}`} 
-                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 flex-shrink-0"
+                className="w-40 h-24 bg-white border border-neutral-200/60 rounded-2xl shadow-sm flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300 shrink-0"
               >
                 <Image
                   src={logo}

@@ -41,7 +41,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-24 bg-[#f5f3f0] text-neutral-900 transition-colors duration-300 overflow-hidden">
+    <section className="py-24 bg-neutral-50 text-neutral-900 transition-colors duration-300 overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         
         {/* Header Section */}
@@ -95,7 +95,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="snap-start flex-shrink-0 w-[90vw] md:w-[65vw] lg:w-[48vw] bg-white rounded-[2rem] shadow-sm overflow-hidden flex flex-col md:flex-row min-h-[350px] relative"
+              className="snap-start shrink-0 w-[90vw] md:w-[65vw] lg:w-[48vw] bg-white rounded-4xl shadow-sm overflow-hidden flex flex-col md:flex-row min-h-[350px] relative"
             >
               {/* Left Side: Text */}
               <div className="w-full md:w-[55%] p-8 md:p-12 flex flex-col justify-between z-10 bg-white">
@@ -129,7 +129,7 @@ export default function Testimonials() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   {/* Subtle overlay for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-r from-black/10 to-transparent" />
                 </div>
               </div>
 

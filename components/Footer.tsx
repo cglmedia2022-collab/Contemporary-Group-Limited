@@ -10,14 +10,32 @@ export default function Footer() {
         
         {/* Top Section */}
         <div className="w-full flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
-          {/* Tagline */}
-          <div className="max-w-xs">
-            <h3 className="font-gotham text-xl md:text-2xl font-bold tracking-tight text-foreground select-none">
-              Experience Liftoff
+          {/* Contact Info */}
+          <div className="max-w-sm">
+            <h3 className="font-gotham text-xl md:text-2xl font-bold tracking-tight text-foreground select-none mb-6 leading-tight">
+              Let’s Build Something Exceptional Together.
             </h3>
-            <p className="font-sans text-xs text-foreground/50 mt-2 leading-relaxed">
-              Pioneering architectural masterpieces and iconic spaces that redefine contemporary horizons.
-            </p>
+            
+            <div className="flex flex-col gap-5 font-sans text-xs text-foreground/60 leading-relaxed">
+            <div className="flex ">
+                            <div>
+                <strong className="text-foreground/80 block mb-1 uppercase tracking-wider text-[10px]">Lagos Office</strong>
+                <p>1 Engineering Close, NSE Building, Victoria Island, Lagos.</p>
+              </div>
+              <div>
+                <strong className="text-foreground/80 block mb-1 uppercase tracking-wider text-[10px]">Asaba Office</strong>
+                <p>Contemporary Building, Interbau Roundabout, Asaba.</p>
+              </div>
+            </div>
+              <div className="flex flex-col gap-1.5 pt-2 border-t border-neutral-200/50">
+                <Link href="mailto:info@contemporarygroupng.com" className="hover:text-brand-primary transition-colors flex gap-2">
+                  <strong className="text-foreground/80">Email:</strong> info@contemporarygroupng.com
+                </Link>
+                <Link href="tel:+2348033044834" className="hover:text-brand-primary transition-colors flex gap-2">
+                  <strong className="text-foreground/80">Phone:</strong> +234 803 304 4834 | +234 907 015 9245
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Links Grid */}
