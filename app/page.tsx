@@ -2,6 +2,8 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
+import Clients from "@/components/Clients";
+import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
 import Footer from "@/components/Footer";
 
@@ -19,6 +21,12 @@ export default function Home() {
       
       {/* Projects Section */}
       <Projects />
+      
+      {/* Clients Section */}
+      <Clients />
+      
+      {/* Testimonials Section */}
+      <Testimonials />
       
       {/* Featured Blog Section */}
       <Blog />
