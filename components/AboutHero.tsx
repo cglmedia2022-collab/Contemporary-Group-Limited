@@ -53,7 +53,7 @@ export default function AboutHero() {
           className="relative h-[400px] md:h-[600px] lg:h-[500px] w-full rounded-4xl md:rounded-[3rem] overflow-hidden shadow-xl mb-16 md:mb-24"
         >
           <Image
-            src="/Herocarousel/v1-Copy-2.png"
+            src="/HeroCarousel/v1-Copy-2.png"
             alt="Contemporary Group Limited - Shaping the Built Environment"
             fill
             className="object-cover"
@@ -95,7 +95,7 @@ export default function AboutHero() {
             className="relative h-[450px] md:h-[550px] w-full rounded-4xl overflow-hidden shadow-lg group bg-neutral-100"
           >
             <Image
-              src="/Herocarousel/ICC-1.png"
+              src="/HeroCarousel/ICC-1.png"
               alt="Our Mission"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -124,7 +124,7 @@ export default function AboutHero() {
             className="relative h-[450px] md:h-[550px] w-full rounded-4xl overflow-hidden shadow-lg group bg-neutral-100"
           >
             <Image
-              src="/Herocarousel/Orchid-Hotels.jpg"
+              src="/HeroCarousel/Orchid-Hotels.jpg"
               alt="Our Vision"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"

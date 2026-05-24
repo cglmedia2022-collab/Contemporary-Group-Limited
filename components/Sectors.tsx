@@ -7,12 +7,12 @@ const sectors = [
   {
     title: "Aviation",
     description: "Designing state-of-the-art terminal buildings and aviation infrastructure for seamless travel experiences.",
-    image: "/Herocarousel/asabaAirport.webp"
+    image: "/HeroCarousel/asabaAirport.webp"
   },
   {
     title: "Commercial",
     description: "Creating innovative workspaces and retail environments that drive business growth and employee well-being.",
-    image: "/Herocarousel/v1-Copy-2.png"
+    image: "/HeroCarousel/v1-Copy-2.png"
   },
   {
     title: "Education",
@@ -27,22 +27,22 @@ const sectors = [
   {
     title: "Hospitality",
     description: "Designing luxurious hotels and resorts that offer unforgettable experiences and world-class comfort.",
-    image: "/Herocarousel/Orchid-Hotels.jpg"
+    image: "/HeroCarousel/Orchid-Hotels.jpg"
   },
   {
     title: "Industrial",
     description: "Engineering robust industrial complexes, warehouses, and manufacturing plants for maximum productivity.",
-    image: "/Herocarousel/oil and gas.jpg"
+    image: "/HeroCarousel/oil and gas.jpg"
   },
   {
     title: "Public Buildings",
     description: "Creating monumental civic structures that serve communities and stand as architectural landmarks.",
-    image: "/Herocarousel/ICC-1.png"
+    image: "/HeroCarousel/ICC-1.png"
   },
   {
     title: "Residential",
     description: "Crafting beautiful, sustainable living spaces ranging from luxury apartments to comprehensive housing estates.",
-    image: "/Herocarousel/image-46.png"
+    image: "/HeroCarousel/image-46.png"
   }
 ];
 
