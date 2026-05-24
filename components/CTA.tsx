@@ -24,7 +24,7 @@ export default function CTA() {
               Ready to Shape <br/> the Future?
             </h2>
             <p className="font-sans text-lg md:text-xl text-white/90 font-medium leading-relaxed">
-              Partner with Contemporary Group Limited for unique solutions and exceptional architectural projects.
+              Partner with Contemporary Group Limited for unique solutions <br/> and exceptional architectural projects.
             </p>
             <div className="flex flex-col sm:flex-row  gap-4 pt-4">
               <Link

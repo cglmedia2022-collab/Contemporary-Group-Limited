@@ -88,7 +88,7 @@ export default function Sectors() {
               />
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30 opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-black/30 opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
               
               {/* Centered Title */}
               <div className="absolute inset-0 flex items-center justify-center p-4">

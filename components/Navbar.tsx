@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const ABOUT_US_LINKS = [
   { name: "Company Overview", href: "/about/company-overview" },
-  { name: "Members of the Group", href: "/about/members" },
+  { name: "Members of the Group", href: "/about/members-of-group" },
   { name: "Board of Directors", href: "/about/board-of-directors" },
   { name: "Team Management and Staff", href: "/about/team" },
   { name: "Technical Partners", href: "/about/technical-partners" },
