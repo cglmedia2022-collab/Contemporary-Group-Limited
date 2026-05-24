@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
+import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
       
       {/* Featured Blog Section */}
       <Blog />
+      
+      {/* CTA Section */}
+      <CTA />
       
       {/* Footer Section */}
       <Footer />

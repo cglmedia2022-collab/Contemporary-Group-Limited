@@ -27,23 +27,26 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Adaptive styles based on scroll state
-  const buttonBorderClass = isScrolled
+  // Adaptive styles based on scroll state and current route
+  const isDarkHero = pathname === "/";
+  const useDarkText = isScrolled || !isDarkHero;
+
+  const buttonBorderClass = useDarkText
     ? "border-foreground/20 text-foreground hover:bg-foreground/5"
     : "border-white/30 text-white hover:bg-white/10";
 
-  const buttonActiveBorderClass = isScrolled
+  const buttonActiveBorderClass = useDarkText
     ? "border-foreground/80 bg-foreground/5 text-foreground"
     : "border-white/80 bg-white/10 text-white";
 
-  const linkClass = isScrolled
+  const linkClass = useDarkText
     ? "text-foreground/80 hover:text-foreground"
     : "text-white/80 hover:text-white";
 
-  const logoTextClass = isScrolled ? "text-foreground" : "text-white";
-  const logoSubTextClass = isScrolled ? "text-foreground/50" : "text-white/50";
+  const logoTextClass = useDarkText ? "text-foreground" : "text-white";
+  const logoSubTextClass = useDarkText ? "text-foreground/50" : "text-white/50";
 
-  const arrowLineClass = isScrolled ? "bg-foreground" : "bg-white";
+  const arrowLineClass = useDarkText ? "bg-foreground" : "bg-white";
 
   return (
     <header
@@ -172,7 +175,7 @@ export default function Navbar() {
         <Link
           href="/contact"
           className={`text-[10px] font-gotham uppercase tracking-widest transition-colors flex items-center gap-2 group ${
-            isScrolled ? "text-foreground hover:text-brand-primary" : "text-white hover:text-brand-primary"
+            useDarkText ? "text-foreground hover:text-brand-primary" : "text-white hover:text-brand-primary"
           }`}
         >
           Contact Us
@@ -184,7 +187,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Toggle */}
       <button
-        className={`lg:hidden relative z-50 p-2 focus:outline-none ${isScrolled ? "text-foreground" : "text-white"}`}
+        className={`lg:hidden relative z-50 p-2 focus:outline-none ${useDarkText ? "text-foreground" : "text-white"}`}
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-label="Toggle Menu"
       >
