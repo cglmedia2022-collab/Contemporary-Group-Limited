@@ -52,12 +52,25 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12 py-6 flex items-center justify-between ${
         isScrolled
-          ? "bg-[#fbfaf9]/85 backdrop-blur-md"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md border-b border-neutral-200/50 shadow-sm"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
-      {/* Left Navigation (Pills) */}
-      <nav className="hidden lg:flex items-center gap-3">
+      {/* Mobile Menu Toggle (Moved to Left) */}
+      <button
+        className={`lg:hidden relative z-50 p-2 focus:outline-none mr-auto ${useDarkText ? "text-foreground" : "text-white"}`}
+        onClick={() => setIsMobileMenuOpen(true)}
+        aria-label="Open Menu"
+      >
+        <div className="w-6 h-5 flex flex-col justify-between">
+          <span className="block h-0.5 w-full bg-current" />
+          <span className="block h-0.5 w-full bg-current" />
+          <span className="block h-0.5 w-full bg-current" />
+        </div>
+      </button>
+
+      {/* Left Navigation (Pills) - Desktop Only */}
+      <nav className="hidden lg:flex items-center gap-3 flex-1">
         <Link
           href="/"
           className={`px-6 py-2 rounded-full text-[10px] font-gotham uppercase tracking-widest transition-all duration-300 ${
@@ -159,7 +172,7 @@ export default function Navbar() {
       </Link>
 
       {/* Right Navigation */}
-      <nav className="hidden lg:flex items-center gap-8">
+      <nav className="hidden lg:flex items-center gap-8 flex-1 justify-end">
         <Link
           href="/careers"
           className={`text-[10px] font-gotham uppercase tracking-widest transition-colors ${linkClass}`}
@@ -185,18 +198,67 @@ export default function Navbar() {
         </Link>
       </nav>
 
-      {/* Mobile Menu Toggle */}
-      <button
-        className={`lg:hidden relative z-50 p-2 focus:outline-none ${useDarkText ? "text-foreground" : "text-white"}`}
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle Menu"
-      >
-        <div className="w-6 h-5 flex flex-col justify-between">
-          <span className={`block h-0.5 w-full bg-current transition-transform duration-300 origin-left ${isMobileMenuOpen ? "rotate-45 translate-x-1" : ""}`} />
-          <span className={`block h-full w-full bg-current transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`} />
-          <span className={`block h-0.5 w-full bg-current transition-transform duration-300 origin-left ${isMobileMenuOpen ? "-rotate-45 translate-x-1" : ""}`} />
-        </div>
-      </button>
+      {/* Mobile Menu Drawer */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            {/* Dark Backdrop (Click to close) */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm lg:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+
+            {/* Slide-in Side Drawer */}
+            <motion.div
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
+              className="fixed inset-y-0 left-0 z-[70] w-[85%] max-w-sm bg-white shadow-2xl flex flex-col lg:hidden overflow-y-auto"
+            >
+              {/* Close Button Header (Aligned Left) */}
+              <div className="px-6 py-8 flex justify-start">
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2.5 text-foreground bg-neutral-100 rounded-full hover:bg-neutral-200 transition-colors"
+                  aria-label="Close Menu"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="flex flex-col gap-8 font-gotham text-2xl font-bold text-neutral-900 px-8 pb-12">
+                <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+                
+                <div className="flex flex-col gap-4">
+                  <span className="text-brand-primary text-xs tracking-[0.2em] uppercase font-bold">About Us</span>
+                  <div className="flex flex-col gap-4 pl-4 font-sans text-base font-medium text-neutral-600">
+                    {ABOUT_US_LINKS.map(link => (
+                      <Link key={link.name} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-brand-primary transition-colors">
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
+                <Link href="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+                <Link href="/careers" onClick={() => setIsMobileMenuOpen(false)}>Careers</Link>
+                <Link href="/media" onClick={() => setIsMobileMenuOpen(false)}>Media</Link>
+                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

@@ -75,7 +75,7 @@ export default function GeneralStaff() {
           transition={{ duration: 0.6 }}
           className="font-gotham text-xs uppercase tracking-[0.2em] text-foreground/40 font-semibold mb-14"
         >
-          General Staff
+          Member Staff
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
