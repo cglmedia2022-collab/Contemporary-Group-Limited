@@ -10,7 +10,7 @@ export default function CTA() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/State-secretariat-4.png"
+              src="/HeroCarousel/Aerial View of Leisure park.jpeg"
               alt="Contemporary Group Limited"
               fill
               className="object-cover object-center"

@@ -31,8 +31,8 @@ export default function Footer() {
                 <Link href="mailto:info@contemporarygroupng.com" className="hover:text-brand-primary transition-colors flex gap-2">
                   <strong className="text-foreground/80">Email:</strong> info@contemporarygroupng.com
                 </Link>
-                <Link href="tel:+2348033044834" className="hover:text-brand-primary transition-colors flex gap-2">
-                  <strong className="text-foreground/80">Phone:</strong> +234 803 304 4834 | +234 907 015 9245
+                <Link href="tel:+2348025923134" className="hover:text-brand-primary transition-colors flex gap-2">
+                  <strong className="text-foreground/80">Phone:</strong> +234 802 592 3134 | 0704 964 5927
                 </Link>
               </div>
             </div>

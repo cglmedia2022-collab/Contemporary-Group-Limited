@@ -2,30 +2,33 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Counter from "@/components/Counter";
 
 export default function About() {
   const stats = [
     { number: "30+", label: "Years of Collaborative Excellence" },
     { number: "250+", label: "Iconic Architectural Masterworks" },
     { number: "5", label: "Strategic Business Units" },
-    { number: "2", label: "Global Operations (Nigeria & Canada)" }
+    { number: "2", label: "Global Operations (Nigeria & Canada)" },
+    { img: "/WildCardPictures/UGC_logo.png", label: "United Nations Global Compact" },
+    { number: "", label: "" }
   ];
 
   const pillars = [
     {
       title: "Visionary Spatial Design",
       desc: "We weave spatial aesthetics and functional harmony into every draft, creating landmarks of architectural poetry.",
-      img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=300&q=80"
+      img: "/HeroCarousel/ICC-1.png"
     },
     {
       title: "Rigorous Technical Precision",
       desc: "Bridging beautiful design with advanced structural engineering to guarantee flawless, world-class precision.",
-      img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=300&q=80"
+      img: "/WildCardPictures/image-20.png"
     },
     {
       title: "Sustainable Modern Innovation",
       desc: "Integrating biophilic principles and smart-energy designs to build low-carbon, future-ready ecosystems.",
-      img: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=300&q=80"
+      img: "/WildCardPictures/State-secretariat-2.png"
     }
   ];
 
@@ -33,17 +36,17 @@ export default function About() {
     {
       name: "Contemporary Design Associates",
       desc: "Premier architectural consultancy, visual scripting, and schematic layout plans.",
-      img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80"
+      img: "/WildCardPictures/design drawing.jpeg"
     },
     {
       name: "Contemporary Properties Limited",
       desc: "Luxury residential developments, property management, and premium real estate solutions.",
-      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+      img: "/HeroCarousel/v1-Copy-2.png"
     },
     {
       name: "Conwave Ventures Limited",
       desc: "Bespoke engineering solutions, technology integration, and concrete structures.",
-      img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80"
+      img: "/HeroCarousel/Consturction Site.jpeg"
     },
     {
       name: "Contemporary Ventures & Resources",
@@ -84,14 +87,24 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="space-y-1"
+                className="space-y-1 flex flex-col justify-start"
               >
-                <span className="font-gotham text-4xl md:text-5xl font-black text-brand-primary tracking-tight">
-                  {stat.number}
-                </span>
-                <p className="font-sans text-[11px] uppercase tracking-wider text-foreground/60 leading-snug font-medium">
-                  {stat.label}
-                </p>
+                {stat.img ? (
+                  <div className="relative w-16 h-16 md:w-20 md:h-20 mb-2">
+                    <Image src={stat.img} alt={stat.label || ""} fill className="object-cover" />
+                  </div>
+                ) : stat.number ? (
+                  <span className="font-gotham text-4xl md:text-5xl font-black text-brand-primary tracking-tight block">
+                    <Counter target={stat.number} />
+                  </span>
+                ) : (
+                  <span className="h-10 block"></span>
+                )}
+                {stat.label && (
+                  <p className="font-sans text-[11px] uppercase tracking-wider text-foreground/60 leading-snug font-medium mt-2">
+                    {stat.label}
+                  </p>
+                )}
               </motion.div>
             ))}
           </div>
@@ -150,7 +163,7 @@ export default function About() {
                     src={pillar.img}
                     alt={pillar.title}
                     fill
-                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="object-cover"
                     sizes="80px"
                   />
                 </div>
@@ -212,7 +225,7 @@ export default function About() {
                   <h3 className="font-gotham text-sm font-bold text-white leading-tight">
                     {sub.name}
                   </h3>
-                  <p className="font-sans text-[10px] text-white/60 leading-relaxed text-justify opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out delay-100">
+                  <p className="font-sans text-[10px] text-white/60 leading-relaxed text-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out delay-100">
                     {sub.desc}
                   </p>
                   

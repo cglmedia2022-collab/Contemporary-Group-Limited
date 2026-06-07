@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Counter from "@/components/Counter";
 
 export default function AboutHero() {
   const stats = [
     { value: "30+", label: "Years of Industry Leadership" },
-    { value: "200+", label: "Landmark Projects Delivered" },
+    { value: "250+", label: "Landmark Projects Delivered" },
     { value: "5", label: "Strategic Subsidiary Companies" },
     { value: "100%", label: "Commitment to Quality & Safety" },
   ];
@@ -74,7 +75,7 @@ export default function AboutHero() {
               className="flex flex-col items-center text-center space-y-4"
             >
               <h3 className="font-gotham text-4xl md:text-5xl font-medium text-foreground tracking-tight">
-                {stat.value}
+                <Counter target={stat.value} />
               </h3>
               <p className="font-sans text-xs md:text-sm text-foreground/50 max-w-[160px] leading-relaxed">
                 {stat.label}
@@ -124,7 +125,7 @@ export default function AboutHero() {
             className="relative h-[450px] md:h-[550px] w-full rounded-4xl overflow-hidden shadow-lg group bg-neutral-100"
           >
             <Image
-              src="/HeroCarousel/Orchid-Hotels.jpg"
+              src="/HeroCarousel/Aerial View of Leisure park.jpeg"
               alt="Our Vision"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"

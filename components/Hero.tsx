@@ -20,31 +20,37 @@ const slides = [
   },
   {
     id: 2,
-    image: "/HeroCarousel/sheraton.jpg",
+    image: "/HeroCarousel/UGC.webp",
+    heading: "United Nations Global Compact",
+    subtext: "We are committed to aligning strategies and operations with universal principles on human rights, labour, environment and anti-corruption."
+  },
+  {
+    id: 3,
+    image: "/HeroCarousel/Consturction Site.jpeg",
     heading: "Innovative Excellence to Architecture.",
     subtext: "Seamlessly blending stunning aesthetics with unparalleled functional excellence."
   },
   {
-    id: 3,
-    image: "/HeroCarousel/image-46.png",
+    id: 4,
+    image: "/HeroCarousel/Aerial View of Leisure park.jpeg",
     heading: "Superior Design Services.",
     subtext: "Experience the fusion of art and utility through inspiring architectural masterpieces."
   },
   {
-    id: 4,
+    id: 5,
     image: "/HeroCarousel/v1-Copy-2.png",
     heading: "Comprehensive Engineering Solutions.",
     subtext: "Top-tier civil, structural, and MEP engineering ensuring absolute project integrity."
   },
   {
-    id: 5,
-    image: "/HeroCarousel/Orchid-Hotels.jpg",
+    id: 6,
+    image: "/HeroCarousel/ProjectManagement.jpeg",
     heading: "Expert Project Management Resources.",
     subtext: "Guaranteed effective project delivery, seamlessly guiding you from inception to completion."
   },
   {
-    id: 6,
-    image: "/HeroCarousel/oil and gas.jpg",
+    id: 7,
+    image: "/Industry/Industrial.jpeg",
     heading: "Reliable Oil and Gas Support Services.",
     subtext: "Utilizing advanced technology and elite expertise to ensure total operational safety and efficiency."
   }
@@ -67,7 +73,7 @@ export default function Hero() {
       nextSlide();
     }, 7000);
     return () => clearInterval(timer);
-  }, []);
+  }, [currentSlide]);
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-neutral-950 selection:bg-brand-primary selection:text-white text-white">

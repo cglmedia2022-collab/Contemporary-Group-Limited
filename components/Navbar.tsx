@@ -11,6 +11,7 @@ const ABOUT_US_LINKS = [
   { name: "Board of Directors", href: "/about/board-of-directors" },
   { name: "Team Management and Staff", href: "/about/team" },
   { name: "Technical Partners", href: "/about/technical-partners" },
+  { name: "Sustainability", href: "/about/sustainability" },
 ];
 
 export default function Navbar() {

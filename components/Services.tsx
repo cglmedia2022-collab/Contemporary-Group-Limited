@@ -9,25 +9,25 @@ export default function Services() {
       num: "01",
       title: "Architectural Design",
       desc: "From initial concept development, visual scripting, and schematic layout plans.",
-      img: "/service-architecture.png"
+      img: "/State-secretariat.png"
     },
     {
       num: "02",
       title: "Interior Architecture",
       desc: "Creating bespoke, cohesive interior spaces with meticulous attention to detail.",
-      img: "/service-interior.png"
+      img: "/WildCardPictures/interior.png"
     },
     {
       num: "03",
       title: "Urban Masterplanning",
       desc: "Designing the fluid spaces between outdoor landscape elements and modern structures.",
-      img: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=800&q=80"
+      img: "/HeroCarousel/Aerial View of Leisure park.jpeg"
     },
     {
       num: "04",
       title: "Design Management & Delivery",
       desc: "Overseeing, auditing, and executing technical precision across all construction phases.",
-      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
+      img: "/WildCardPictures/design drawing.jpeg"
     }
   ];
 
@@ -93,7 +93,7 @@ export default function Services() {
                 <h3 className="font-gotham text-base font-bold text-foreground group-hover:text-brand-primary transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="font-sans text-xs text-foreground/60 leading-relaxed text-justify">
+                <p className="font-sans text-xs text-foreground/60 leading-relaxed text-start">
                   {service.desc}
                 </p>
               </div>

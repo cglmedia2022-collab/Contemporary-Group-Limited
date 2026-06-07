@@ -12,17 +12,17 @@ const sectors = [
   {
     title: "Commercial",
     description: "Creating innovative workspaces and retail environments that drive business growth and employee well-being.",
-    image: "/HeroCarousel/v1-Copy-2.png"
+    image: "/Industry/Commercial.png"
   },
   {
     title: "Education",
     description: "Building inspiring learning environments that foster creativity, focus, and academic excellence.",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80"
+    image: "/Industry/Education.jpeg"
   },
   {
     title: "Healthcare",
     description: "Developing advanced medical facilities focused on patient care, safety, and operational efficiency.",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+    image: "/Industry/Healthcare.jpg"
   },
   {
     title: "Hospitality",
@@ -32,17 +32,17 @@ const sectors = [
   {
     title: "Industrial",
     description: "Engineering robust industrial complexes, warehouses, and manufacturing plants for maximum productivity.",
-    image: "/HeroCarousel/oil and gas.jpg"
+    image: "/Industry/Industrial.jpeg"
   },
   {
     title: "Public Buildings",
     description: "Creating monumental civic structures that serve communities and stand as architectural landmarks.",
-    image: "/HeroCarousel/ICC-1.png"
+    image: "/HeroCarousel/Arial View of Leasuire park.jpeg"
   },
   {
     title: "Residential",
     description: "Crafting beautiful, sustainable living spaces ranging from luxury apartments to comprehensive housing estates.",
-    image: "/HeroCarousel/image-46.png"
+    image: "/HeroCarousel/v1-Copy-2.png"
   }
 ];
 
