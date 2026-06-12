@@ -32,7 +32,7 @@ export default function Footer() {
                   <strong className="text-foreground/80">Email:</strong> info@contemporarygroupng.com
                 </Link>
                 <Link href="tel:+2348025923134" className="hover:text-brand-primary transition-colors flex gap-2">
-                  <strong className="text-foreground/80">Phone:</strong> +234 802 592 3134 | 0704 964 5927
+                  <strong className="text-foreground/80">Phone:</strong> +234 802 592 3134 | +234 704 964 5927
                 </Link>
               </div>
             </div>

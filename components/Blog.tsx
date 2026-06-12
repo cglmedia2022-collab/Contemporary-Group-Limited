@@ -1,13 +1,13 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { blogPosts } from "@/lib/blogData";
+import { getBlogs } from "@/lib/fetchData";
 
-export default function Blog() {
-  const featuredPost = blogPosts[0];
-  const otherPosts = blogPosts.slice(1);
+export default async function Blog() {
+  const dbBlogs = await getBlogs();
+  const allPosts = [...dbBlogs, ...blogPosts];
+  const featuredPost = allPosts[0];
+  const otherPosts = allPosts.slice(1, 5); // Limit to 4 other posts for the layout
 
   return (
     <section className="py-24 bg-background text-foreground transition-colors duration-300" id="blog">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import { getBlogs } from "@/lib/fetchData";
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -13,7 +14,9 @@ export async function generateStaticParams() {
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const dbBlogs = await getBlogs();
+  const allPosts = [...dbBlogs, ...blogPosts];
+  const post = allPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -70,9 +73,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
 
         {/* Content */}
-        <div className="prose prose-lg dark:prose-invert max-w-none font-sans text-justify">
-          {post.content}
-        </div>
+        {typeof post.content === "string" ? (
+          <div className="prose prose-lg dark:prose-invert max-w-none font-sans text-justify" dangerouslySetInnerHTML={{ __html: post.content }} />
+        ) : (
+          <div className="prose prose-lg dark:prose-invert max-w-none font-sans text-justify">
+            {post.content}
+          </div>
+        )}
         
         </article>
       </main>

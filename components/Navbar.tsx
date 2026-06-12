@@ -60,6 +60,11 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
+  // Hide the main navbar on admin routes
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
+
   return (
     <>
     <header
