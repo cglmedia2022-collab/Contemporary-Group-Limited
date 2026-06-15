@@ -50,6 +50,8 @@ export async function getProjects() {
       client: p.client,
       category: p.category,
       image: p.image,
+      content: p.content,
+      gallery: p.gallery,
     }));
   } catch (error) {
     console.error("Error fetching projects:", error);

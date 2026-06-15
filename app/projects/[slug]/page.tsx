@@ -4,11 +4,12 @@ import Link from "next/link";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { getProjects } from "@/lib/fetchData";
+import Blog from "@/components/Blog";
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const dbProjects = await getProjects();
-  const project = dbProjects.find((p: any) => p.slug === slug);
+  const project = dbProjects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -48,14 +49,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </header>
 
         {/* Featured Image */}
-        <div className="relative w-full aspect-video rounded-3xl overflow-hidden mb-16 bg-neutral-100">
+        <div className="relative w-full h-[400px] rounded-3xl overflow-hidden mb-16 bg-neutral-100">
           <Image
             src={project.image}
             alt={project.title}
             fill
             className="object-cover"
             priority
-            sizes="(max-width: 1024px) 100vw, 1024px"
           />
         </div>
 
@@ -92,6 +92,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         
         </article>
       </main>
+      <Blog/>
       <CTA />
       <Footer />
     </div>

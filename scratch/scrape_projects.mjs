@@ -63,15 +63,11 @@ async function scrapeProjects() {
       const pageHtml = await pageRes.text();
       const $page = cheerio.load(pageHtml);
 
-      // Title usually in the main heading
-      const title = $page('h2.elementor-heading-title b').first().text().trim() 
-                  || $page('h1').first().text().trim() 
-                  || $page('h2.elementor-heading-title').first().text().trim();
-      
       const slug = url.split('/').filter(Boolean).pop();
+      const title = slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
 
       // Look for Client and Category in the text or default
-      let client = "Unknown Client";
+      let client = "Various";
       let category = "General";
       let contentHtml = "";
 
@@ -93,7 +89,7 @@ async function scrapeProjects() {
       $page('img').each((i, el) => {
         const src = $page(el).attr('src');
         // Only keep large/content images, ignore logos and icons
-        if (src && !src.includes('logo') && !src.includes('favicon') && src.startsWith('http')) {
+        if (src && !src.toLowerCase().includes('logo') && !src.toLowerCase().includes('favicon') && src.startsWith('http')) {
           if (!images.includes(src)) images.push(src);
         }
       });
@@ -115,19 +111,15 @@ async function scrapeProjects() {
         if (uploaded) gallery.push(uploaded);
       }
 
-      // Save to MongoDB
-      await Project.findOneAndUpdate(
+      // Save images to MongoDB without overwriting text
+      await Project.updateOne(
         { slug },
         {
-          title,
-          slug,
-          client,
-          category,
-          image: mainImage,
-          content: contentHtml,
-          gallery
-        },
-        { upsert: true, new: true }
+          $set: {
+            image: mainImage,
+            gallery: gallery
+          }
+        }
       );
 
       console.log(`✅ Saved ${title} to database.`);
