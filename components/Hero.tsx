@@ -26,7 +26,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/HeroCarousel/Consturction Site.jpeg",
+    image: "/WildCardPictures/State-Sec.jpeg",
     heading: "Innovative Excellence to Architecture.",
     subtext: "Seamlessly blending stunning aesthetics with unparalleled functional excellence."
   },
@@ -38,7 +38,7 @@ const slides = [
   },
   {
     id: 5,
-    image: "/HeroCarousel/v1-Copy-2.png",
+    image: "/HeroCarousel/Consturction Site.jpeg",
     heading: "Comprehensive Engineering Solutions.",
     subtext: "Top-tier civil, structural, and MEP engineering ensuring absolute project integrity."
   },
