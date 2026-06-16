@@ -18,7 +18,16 @@ const categories = [
   "Public Buildings"
 ];
 
-export default function ProjectsFilter({ allProjects }: { allProjects: any[] }) {
+interface ProjectData {
+  id: string;
+  title: string;
+  slug: string;
+  client: string;
+  category: string;
+  image: string;
+}
+
+export default function ProjectsFilter({ allProjects }: { allProjects: ProjectData[] }) {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects = allProjects.filter(
@@ -64,7 +73,7 @@ export default function ProjectsFilter({ allProjects }: { allProjects: any[] }) 
               >
                 <Link href={`/projects/${project.slug || project.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "")}`} className="cursor-pointer block h-full">
                   {/* Image Card */}
-                  <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-neutral-100 mb-5">
+                  <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 mb-5">
                     <Image
                       src={project.image}
                       alt={project.title}

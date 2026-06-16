@@ -8,19 +8,22 @@ import { getCareers } from "@/lib/fetchData";
 const openRoles = [
   {
     id: "r1",
-    location: "Asaba / On-site",
+    location: "Asaba",
+    workModel: "On-site",
     title: "Senior Architect",
     description: "Lead design projects from conception to completion. Strong proficiency in modern architectural software and a portfolio of completed commercial projects is required."
   },
   {
     id: "r2",
-    location: "Lagos / Hybrid",
+    location: "Lagos",
+    workModel: "Hybrid",
     title: "Project Manager - Construction",
     description: "Manage timelines, budgets, and site teams to deliver high-quality construction projects across multiple locations. Minimum 5 years experience."
   },
   {
     id: "r3",
-    location: "Abuja / On-site",
+    location: "Abuja",
+    workModel: "On-site",
     title: "Civil Engineer",
     description: "Conduct structural analysis, oversee site safety, and ensure all building codes and engineering standards are strictly followed."
   }
@@ -40,7 +43,7 @@ export default async function CareersPage() {
             Careers at Contemporary Group
           </h1>
           
-          <div className="relative w-full aspect-[21/9] md:aspect-[3/1] rounded-3xl overflow-hidden mb-12 bg-neutral-100">
+          <div className="relative w-full aspect-21/9 md:aspect-3/1 rounded-3xl overflow-hidden mb-12 bg-neutral-100">
             <Image 
               src="/project-villa.png" 
               alt="Contemporary Group Projects" 
@@ -52,7 +55,7 @@ export default async function CareersPage() {
           
           <div className="flex justify-end">
             <p className="max-w-2xl font-sans text-sm md:text-base leading-relaxed text-neutral-700 font-medium">
-              At Contemporary Group, we believe that building a sustainable future starts with passionate people. As a company rooted in innovation, design excellence, and smart solutions, we're looking for dedicated individuals who are ready to make a real impact on the built environment and their careers.
+              At Contemporary Group, we believe that building a sustainable future starts with passionate people. As a company rooted in innovation, design excellence, and smart solutions, we&apos;re looking for dedicated individuals who are ready to make a real impact on the built environment and their careers.
             </p>
           </div>
         </section>
@@ -65,7 +68,7 @@ export default async function CareersPage() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             {/* Left Image */}
-            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-neutral-100">
+            <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100">
               <Image 
                 src="/WildCardPictures/interior.png" 
                 alt="Working at Contemporary Group" 

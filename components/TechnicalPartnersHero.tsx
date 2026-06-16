@@ -76,7 +76,7 @@ export default function TechnicalPartnersHero() {
                 className="flex flex-col space-y-6"
               >
                 {/* Photo */}
-                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden bg-neutral-100 group">
+                <div className="relative aspect-4/5 w-full rounded-2xl overflow-hidden bg-neutral-100 group">
                   <Image
                     src={partner.photo}
                     alt={partner.name}

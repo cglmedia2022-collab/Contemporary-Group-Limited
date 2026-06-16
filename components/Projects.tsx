@@ -79,7 +79,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="group cursor-pointer relative aspect-[4/3] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
+              className="group cursor-pointer relative aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
             >
               <Link href="/projects/delta-state-secretariat" className="absolute inset-0 z-20" aria-label="View Delta State Central Secretariat" />
               <Image
@@ -172,7 +172,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="group cursor-pointer relative aspect-[4/3] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
+              className="group cursor-pointer relative aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
             >
               <Link href="/projects/international-conference-centre" className="absolute inset-0 z-20" aria-label="View International Conference Centre" />
               <Image
@@ -217,7 +217,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="group cursor-pointer relative aspect-[4/3] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
+              className="group cursor-pointer relative aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
             >
               <Link href="/projects/nigerian-law-school-yenagoa" className="absolute inset-0 z-20" aria-label="View Nigerian Law School Yenagoa" />
               <Image

@@ -120,7 +120,7 @@ export const blogPosts: BlogPost[] = [
     content: (
       <>
         <div className="flex flex-col md:flex-row gap-8 mb-8">
-          <div className="relative w-full md:w-1/3 aspect-[3/4] rounded-2xl overflow-hidden shrink-0">
+          <div className="relative w-full md:w-1/3 aspect-3/4 rounded-2xl overflow-hidden shrink-0">
             <Image src="https://www.contemporarygroupng.com/wp-content/uploads/2024/10/Mr-Kester-CGL.jpg" alt="Arc Kester Ifeadi" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
           </div>
           <div className="flex-1">

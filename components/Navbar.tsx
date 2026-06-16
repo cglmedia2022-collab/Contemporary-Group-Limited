@@ -227,7 +227,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-60 bg-black/60 backdrop-blur-sm lg:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           />
 
@@ -237,7 +237,7 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.4, ease: [0.32, 0.72, 0, 1] }}
-            className="fixed inset-y-0 left-0 z-[70] w-[85%] max-w-sm bg-white shadow-2xl flex flex-col lg:hidden overflow-y-auto"
+            className="fixed inset-y-0 left-0 z-70 w-[85%] max-w-sm bg-white shadow-2xl flex flex-col lg:hidden overflow-y-auto"
           >
             {/* Close Button Header (Aligned Left) */}
             <div className="px-6 py-8 flex justify-start">

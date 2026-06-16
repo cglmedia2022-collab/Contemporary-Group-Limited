@@ -34,7 +34,7 @@ export default function AdminDashboard() {
     router.push("/admin");
   };
 
-  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>, setFormState: Function) => {
+  const handleImageUpload = async <T,>(e: React.ChangeEvent<HTMLInputElement>, setFormState: React.Dispatch<React.SetStateAction<T>>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
@@ -51,7 +51,7 @@ export default function AdminDashboard() {
       });
       const data = await res.json();
       if (data.url) {
-        setFormState((prev: any) => ({ ...prev, image: data.url }));
+        setFormState((prev) => ({ ...prev, image: data.url } as unknown as T));
         setMessage("Image uploaded successfully!");
       } else {
         setMessage("Image upload failed.");
@@ -64,7 +64,7 @@ export default function AdminDashboard() {
     }
   };
 
-  const handleGalleryUpload = async (e: React.ChangeEvent<HTMLInputElement>, setFormState: Function) => {
+  const handleGalleryUpload = async <T,>(e: React.ChangeEvent<HTMLInputElement>, setFormState: React.Dispatch<React.SetStateAction<T>>) => {
     const files = e.target.files;
     if (!files || files.length === 0) return;
 
@@ -85,7 +85,10 @@ export default function AdminDashboard() {
       }
     }
 
-    setFormState((prev: any) => ({ ...prev, gallery: [...prev.gallery, ...uploadedUrls] }));
+    setFormState((prev) => {
+      const prevGallery = (prev as unknown as { gallery?: string[] }).gallery || [];
+      return { ...prev, gallery: [...prevGallery, ...uploadedUrls] } as unknown as T;
+    });
     setMessage(`${uploadedUrls.length} image(s) added to gallery.`);
     setIsUploading(false);
   };
@@ -107,7 +110,7 @@ export default function AdminDashboard() {
       } else {
         setMessage("Failed to create blog post.");
       }
-    } catch (err) {
+    } catch {
       setMessage("Error creating blog post.");
     } finally {
       setIsSubmitting(false);
@@ -130,7 +133,7 @@ export default function AdminDashboard() {
       } else {
         setMessage("Failed to create career.");
       }
-    } catch (err) {
+    } catch {
       setMessage("Error creating career.");
     } finally {
       setIsSubmitting(false);
@@ -154,7 +157,7 @@ export default function AdminDashboard() {
       } else {
         setMessage("Failed to create project.");
       }
-    } catch (err) {
+    } catch {
       setMessage("Error creating project.");
     } finally {
       setIsSubmitting(false);
@@ -256,7 +259,7 @@ export default function AdminDashboard() {
         <input type="file" accept="image/*" ref={fileInputRef} onChange={e => handleImageUpload(e, setProjectForm)} className="w-full" required={!projectForm.image} />
         {isUploading && <p className="text-sm text-brand-primary mt-2">Uploading image...</p>}
         {projectForm.image && !isUploading && (
-          <div className="mt-4 relative w-32 aspect-[4/3] rounded-lg overflow-hidden">
+          <div className="mt-4 relative w-32 aspect-4/3 rounded-lg overflow-hidden">
             <Image src={projectForm.image} alt="Preview" fill className="object-cover" />
           </div>
         )}
