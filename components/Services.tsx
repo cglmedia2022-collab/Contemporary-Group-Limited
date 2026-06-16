@@ -82,7 +82,7 @@ export default function Services() {
           </div>
           
           {/* Navigation Arrows */}
-          <div className="flex gap-4 items-center hidden md:flex">
+          <div className="flex gap-4 items-center md:flex">
             <button 
               onClick={() => scroll("left")}
               className="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors duration-300 hover:border-brand-primary"
