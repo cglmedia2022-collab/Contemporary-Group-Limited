@@ -33,6 +33,11 @@ const services = [
     title: "Turnkey Design–Build Solutions",
     desc: "Offering a unified workflow where design and construction are handled under a single contract, accelerating delivery and minimizing client risk.",
     img: "/HeroCarousel/ICC-1.png"
+  },
+  {
+    title: "Project Management",
+    desc: "Comprehensive lifecycle planning, risk mitigation, and stakeholder coordination ensuring successful project delivery.",
+    img: "/HeroCarousel/Aerial View of Leisure park.jpeg"
   }
 ];
 
@@ -45,11 +50,12 @@ export default function ServicesList() {
           {services.map((service, index) => (
             <motion.div
               key={index}
+              id={`service-${index}`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="group flex flex-col"
+              className="group flex flex-col scroll-mt-32"
             >
               <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden mb-8 bg-neutral-100 shadow-sm transition-shadow duration-500 group-hover:shadow-2xl group-hover:shadow-brand-primary/10">
                 <Image

@@ -11,7 +11,7 @@ export default function About() {
     { number: "5", label: "Strategic Business Units" },
     { number: "2", label: "Global Operations (Nigeria & Canada)" },
     { img: "/WildCardPictures/UGC_logo.png", label: "United Nations Global Compact" },
-    { number: "", label: "" }
+    { img: "/WildCardPictures/CAP.jpeg", label: "The Lagos State Certified Accreditors Programme (CAP)" }
   ];
 
   const pillars = [
