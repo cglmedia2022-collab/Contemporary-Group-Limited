@@ -37,7 +37,12 @@ export const metadata: Metadata = {
 
 export default async function ProjectsPage() {
   const dbProjects = await getProjects();
-  const allProjects = [...dbProjects, ...staticProjects];
+  const mappedStaticProjects = staticProjects.map((p, i) => ({
+    ...p,
+    id: `static-${i}`,
+    slug: p.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+  }));
+  const allProjects = [...dbProjects, ...mappedStaticProjects];
 
   return (
     <main className="flex flex-col min-h-screen">
