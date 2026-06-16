@@ -7,7 +7,6 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#f5f3f0]/50 text-neutral-800 border-t border-neutral-200/60 transition-colors duration-300">
       <div className="container mx-auto px-6 md:px-12 lg:px-24 pt-20 pb-10 flex flex-col justify-between min-h-[50vh]">
-        
         {/* Top Section */}
         <div className="w-full flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
           {/* Contact Info */}
@@ -15,24 +14,38 @@ export default function Footer() {
             <h3 className="font-gotham text-xl md:text-2xl font-bold tracking-tight text-foreground select-none mb-6 leading-tight">
               Let’s Build Something Exceptional Together.
             </h3>
-            
+
             <div className="flex flex-col gap-5 font-sans text-xs text-foreground/60 leading-relaxed">
-            <div className="flex ">
-                            <div>
-                <strong className="text-foreground/80 block mb-1 uppercase tracking-wider text-[10px]">Lagos Office</strong>
-                <p>1 Engineering Close, NSE Building, Victoria Island, Lagos.</p>
+              <div className="flex ">
+                <div>
+                  <strong className="text-foreground/80 block mb-1 uppercase tracking-wider text-[10px]">
+                    Lagos Office
+                  </strong>
+                  <p>
+                    1 Engineering Close, NSE Building, Victoria Island, Lagos.
+                  </p>
+                </div>
+                <div>
+                  <strong className="text-foreground/80 block mb-1 uppercase tracking-wider text-[10px]">
+                    Asaba Office
+                  </strong>
+                  <p>Contemporary Building, Interbau Roundabout, Asaba.</p>
+                </div>
               </div>
-              <div>
-                <strong className="text-foreground/80 block mb-1 uppercase tracking-wider text-[10px]">Asaba Office</strong>
-                <p>Contemporary Building, Interbau Roundabout, Asaba.</p>
-              </div>
-            </div>
               <div className="flex flex-col gap-1.5 pt-2 border-t border-neutral-200/50">
-                <Link href="mailto:info@contemporarygroupng.com" className="hover:text-brand-primary transition-colors flex gap-2">
-                  <strong className="text-foreground/80">Email:</strong> info@contemporarygroupng.com
+                <Link
+                  href="mailto:info@contemporarygroupng.com"
+                  className="hover:text-brand-primary transition-colors flex gap-2"
+                >
+                  <strong className="text-foreground/80">Email:</strong>{" "}
+                  info@contemporarygroupng.com
                 </Link>
-                <Link href="tel:+2348025923134" className="hover:text-brand-primary transition-colors flex gap-2">
-                  <strong className="text-foreground/80">Phone:</strong> +234 802 592 3134 | +234 704 964 5927
+                <Link
+                  href="tel:+2348025923134"
+                  className="hover:text-brand-primary transition-colors flex gap-2"
+                >
+                  <strong className="text-foreground/80">Phone:</strong> +234
+                  802 592 3134 | +234 704 964 5927
                 </Link>
               </div>
             </div>
@@ -45,19 +58,34 @@ export default function Footer() {
               <span className="font-gotham text-[10px] uppercase tracking-widest text-foreground/40 font-semibold mb-2">
                 Our Group
               </span>
-              <Link href="/about/company-overview" className="text-xs text-foreground/60 hover:text-brand-primary transition-colors">
+              <Link
+                href="/about/company-overview"
+                className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
+              >
                 Company Overview
               </Link>
-              <Link href="/about/members" className="text-xs text-foreground/60 hover:text-brand-primary transition-colors">
+              <Link
+                href="/about/members"
+                className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
+              >
                 Group Members
               </Link>
-              <Link href="/about/board-of-directors" className="text-xs text-foreground/60 hover:text-brand-primary transition-colors">
+              <Link
+                href="/about/board-of-directors"
+                className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
+              >
                 Board of Directors
               </Link>
-              <Link href="/about/team" className="text-xs text-foreground/60 hover:text-brand-primary transition-colors">
+              <Link
+                href="/about/team"
+                className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
+              >
                 Team Management
               </Link>
-              <Link href="/about/technical-partners" className="text-xs text-foreground/60 hover:text-brand-primary transition-colors">
+              <Link
+                href="/about/technical-partners"
+                className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
+              >
                 Technical Partners
               </Link>
             </div>
@@ -67,16 +95,28 @@ export default function Footer() {
               <span className="font-gotham text-[10px] uppercase tracking-widest text-foreground/40 font-semibold mb-2">
                 Explore
               </span>
-              <Link href="/services" className="text-xs text-foreground/60 hover:text-brand-primary transition-colors">
+              <Link
+                href="/services"
+                className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
+              >
                 Our Services
               </Link>
-              <Link href="/projects" className="text-xs text-foreground/60 hover:text-brand-primary transition-colors">
+              <Link
+                href="/projects"
+                className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
+              >
                 Featured Projects
               </Link>
-              <Link href="/careers" className="text-xs text-foreground/60 hover:text-brand-primary transition-colors">
+              <Link
+                href="/careers"
+                className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
+              >
                 Careers
               </Link>
-              <Link href="/media" className="text-xs text-foreground/60 hover:text-brand-primary transition-colors">
+              <Link
+                href="/media"
+                className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
+              >
                 Media & Blog
               </Link>
             </div>
@@ -85,12 +125,12 @@ export default function Footer() {
 
         {/* Middle Section - Giant Typography */}
         <div className="w-full text-center overflow-hidden mb-12 select-none pointer-events-none">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="text-[9.5vw] font-gotham font-extrabold text-neutral uppercase tracking-tighter leading-none"
+            className="text-[10vw] sm:text-[9vw] md:text-[8vw] lg:text-[7.5vw] xl:text-[7vw] 2xl:text-[9vw] font-gotham font-extrabold text-neutral uppercase tracking-tighter leading-none whitespace-nowrap"
           >
             CONTEMPORARY
           </motion.h2>
@@ -112,16 +152,23 @@ export default function Footer() {
 
           {/* Legal / Secondary Links */}
           <div className="flex items-center gap-8 text-[10px] font-sans text-foreground/50">
-            <Link href="/privacy" className="hover:text-brand-primary transition-colors">
+            <Link
+              href="/privacy"
+              className="hover:text-brand-primary transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-brand-primary transition-colors">
+            <Link
+              href="/terms"
+              className="hover:text-brand-primary transition-colors"
+            >
               Terms & Conditions
             </Link>
-            <span>&copy; {new Date().getFullYear()} CGL. All Rights Reserved.</span>
+            <span>
+              &copy; {new Date().getFullYear()} CGL. All Rights Reserved.
+            </span>
           </div>
         </div>
-
       </div>
     </footer>
   );
