@@ -44,7 +44,7 @@ const staff = [
   {
     name: "Arc. Emmanuel Afolabi",
     title: "Lead Architect",
-    photo: null,
+    photo: '/Key Staff/Afolabi.jpg',
     bio: "Attended Covenant University from 2004 to 2010, where he obtained both his Bachelor's and Master's degrees in Architecture. He has played a significant role in the design and supervision of projects across Abuja, Asaba, and Lagos. Currently Head of the Architectural Department and a registered member of the NIA and ARCON.",
   },
 ];
