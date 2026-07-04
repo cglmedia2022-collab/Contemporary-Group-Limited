@@ -12,17 +12,17 @@ const playfair = Playfair_Display({
 });
 
 const slides = [
-  {
+    {
     id: 1,
-    image: "/HeroCarousel/asabaAirport.webp",
-    heading: "Bespoke Architectural Services.",
-    subtext: "Crafting spaces where breathtaking beauty meets practical brilliance."
-  },
-  {
-    id: 2,
     image: "/HeroCarousel/UGC.webp",
     heading: "United Nations Global Compact",
     subtext: "We are committed to aligning strategies and operations with universal principles on human rights, labour, environment and anti-corruption."
+  },
+  {
+    id: 2,
+    image: "/HeroCarousel/asabaAirport.webp",
+    heading: "Bespoke Architectural Services.",
+    subtext: "Crafting spaces where breathtaking beauty meets practical brilliance."
   },
   {
     id: 3,
