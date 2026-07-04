@@ -37,7 +37,7 @@ const sectors = [
   {
     title: "Public Buildings",
     description: "Creating monumental civic structures that serve communities and stand as architectural landmarks.",
-    image: "/HeroCarousel/Arial View of Leasuire park.jpeg"
+    image: "/WildCardPictures/State-Sec.jpeg"
   },
   {
     title: "Residential",

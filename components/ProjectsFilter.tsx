@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { pastProjectsList } from "@/lib/pastProjects";
 
 const categories = [
   "All",
@@ -29,6 +30,7 @@ interface ProjectData {
 
 export default function ProjectsFilter({ allProjects }: { allProjects: ProjectData[] }) {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [showPastProjects, setShowPastProjects] = useState(false);
 
   const filteredProjects = allProjects.filter(
     (project) => activeCategory === "All" || project.category === activeCategory
@@ -103,6 +105,57 @@ export default function ProjectsFilter({ allProjects }: { allProjects: ProjectDa
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Load More Button */}
+        <div className="mt-16 flex justify-center">
+          <button
+            onClick={() => setShowPastProjects(!showPastProjects)}
+            className="px-8 py-3 rounded-full font-gotham text-xs uppercase tracking-widest border-2 border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white transition-colors duration-300"
+          >
+            {showPastProjects ? "Hide More Projects" : "Load More Projects"}
+          </button>
+        </div>
+
+        {/* Past Projects List */}
+        <AnimatePresence>
+          {showPastProjects && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="overflow-hidden"
+            >
+              <div className="mt-16 border-t border-neutral-200 pt-16">
+                <div className="flex flex-col items-center mb-12">
+                  <h2 className="font-gotham text-3xl md:text-4xl font-extrabold tracking-tight text-center text-foreground">
+                    Other Notable Projects
+                  </h2>
+                  <p className="font-sans text-foreground/60 text-center max-w-2xl mt-4">
+                    A selection of our extensive portfolio of projects delivered over the years across various sectors.
+                  </p>
+                </div>
+                
+                <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-5 gap-8">
+                  {pastProjectsList.map((categoryGroup) => (
+                    <div key={categoryGroup.category} className="mb-12 inline-block w-full break-inside-avoid">
+                      <h3 className="font-gotham text-xs uppercase tracking-widest text-brand-primary font-bold border-b border-brand-primary/20 pb-3 mb-4">
+                        {categoryGroup.category}
+                      </h3>
+                      <ul className="space-y-3">
+                        {categoryGroup.items.map((item, idx) => (
+                          <li key={idx} className="font-sans text-sm text-foreground/80 leading-relaxed flex items-start gap-2">
+                            <span className="text-brand-primary mt-1 text-[10px]">■</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </div>
     </section>
