@@ -8,15 +8,15 @@ import { motion, AnimatePresence } from "framer-motion";
 const categories = ["All", "Construction", "Award", "Sustainability", "Architecture"];
 
 const galleryImages = [
-  "/service-interior.png",
+  "/WildCardPictures/Pearle Suites.jpg",
   "/WildCardPictures/interior.png",
-  "/project-villa.png",
-  "/State-secretariat-4.png",
-  "/WildCardPictures/design drawing.jpeg",
-  "/pillars-structure.png",
-  "/service-architecture.png",
   "/WildCardPictures/State-Sec.jpeg",
-  "/WildCardPictures/details-zenithbank.png",
+  "/WildCardPictures/design drawing.jpeg",
+  "/WildCardPictures/Allied Towers.png",
+  "/WildCardPictures/Administrative Building.jpg",
+  "/WildCardPictures/CGL pic.png",
+  "/WildCardPictures/CareersPic.jpeg",
+  "/WildCardPictures/Picture2.jpg"
 ];
 
 export default function MediaContent({ allPosts }: { allPosts: any[] }) {

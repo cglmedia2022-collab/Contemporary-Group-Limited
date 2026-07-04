@@ -84,7 +84,7 @@ const members = [
       "Mixed-Use Architectural Design",
       "International Master Planning",
     ],
-    image: "/HeroCarousel/image-46.png",
+    image: "/WildCardPictures/CPL Picture.jpeg",
   },
 ];
 
