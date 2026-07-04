@@ -12,12 +12,12 @@ const services = [
   {
     title: "Contractor Finance Structuring",
     desc: "Providing flexible, robust financial structuring and modeling to ensure seamless project funding and uninterrupted execution.",
-    img: "/HeroCarousel/ProjectManagement.jpeg"
+    img: "/WildCardPictures/State-Sec.jpeg"
   },
   {
     title: "Interior Design & Fit-Out Solutions",
     desc: "Crafting bespoke interior environments that reflect the identity of the occupants through meticulous material selection and execution.",
-    img: "/WildCardPictures/interior.png"
+    img: "/WildCardPictures/Pearle Suites.jpg"
   },
   {
     title: "Procurement & Logistics Management",
@@ -37,7 +37,7 @@ const services = [
   {
     title: "Project Management",
     desc: "Comprehensive lifecycle planning, risk mitigation, and stakeholder coordination ensuring successful project delivery.",
-    img: "/HeroCarousel/Aerial View of Leisure park.jpeg"
+    img: "/HeroCarousel/ProjectManagement.jpeg"
   }
 ];
 

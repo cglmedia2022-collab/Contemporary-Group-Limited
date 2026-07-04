@@ -38,7 +38,7 @@ export default function Services() {
       num: "03",
       title: "Interior Design & Fit-Out Solutions",
       desc: "Creating bespoke, cohesive interior spaces with meticulous attention to detail.",
-      img: "/WildCardPictures/interior.png"
+      img: "/WildCardPictures/Pearle Suites.jpg"
     },
     {
       num: "04",
