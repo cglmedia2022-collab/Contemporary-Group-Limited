@@ -38,14 +38,14 @@ const members = [
       "Block of Luxury Flats — Queens Drive, Ikoyi",
       "Ebeano Mall — Lekki",
     ],
-    image: "/HeroCarousel/Orchid-Hotels.jpg",
+    image: "/WildCardPictures/4 Points By Sheraton, Asaba, Delta State (Ongoing)..jpg",
   },
   {
     name: "Contemporary Ventures & Resources Limited",
     abbr: "CVR",
     logo: "/MemeberGroup Logo/CVRp-Logos.png",
     role: "Real Estate & Energy Solutions",
-    website: "https://www.contemporarygroupng.com",
+    website: "https://www.cvrnigerialimited.com/",
     description:
       "CVR offers a multitude of professional services including residential and commercial development, sales, leasing, energy solutions, alternative backup power, and joint venture partnerships and financing. As a Design and Build subsidiary, CVR bridges the gap between development and resource management.",
     notableProjects: [

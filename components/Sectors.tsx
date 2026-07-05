@@ -27,7 +27,7 @@ const sectors = [
   {
     title: "Hospitality",
     description: "Designing luxurious hotels and resorts that offer unforgettable experiences and world-class comfort.",
-    image: "/HeroCarousel/Orchid-Hotels.jpg"
+    image: "/WildCardPictures/Pearle Suites.jpg"
   },
   {
     title: "Industrial",
