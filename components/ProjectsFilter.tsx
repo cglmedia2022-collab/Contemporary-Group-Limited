@@ -77,9 +77,10 @@ export default function ProjectsFilter({ allProjects }: { allProjects: ProjectDa
                   {/* Image Card */}
                   <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 mb-5">
                     <Image
-                      src={project.image}
+                      src={project.image?.trim()}
                       alt={project.title}
                       fill
+                      unoptimized={project.image?.includes('cloudinary')}
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
