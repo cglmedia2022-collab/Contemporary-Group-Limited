@@ -6,6 +6,12 @@ import Image from "next/image";
 
 const staff = [
   {
+    name: "Samuel Ekene Ifeadi",
+    title: "Business Development Executive",
+    photo: "/Board of Directors/Samuel Ekene Ifeadi.jpeg",
+    bio: "With over 8 years of experience in B2B sales, strategic partnerships, and commercial growth. He holds a Bachelor’s degree in Economics from the University of Victoria and a Master’s in Management Innovation & Entrepreneurship from Queen’s University. Samuel brings a strong focus on client relationships, business visibility, and sustainable growth opportunities.",
+  },
+  {
     name: "Olusola Adekunle",
     title: "Project Manager",
     photo: "/Key Staff/Olusola Adekunle.jpeg",

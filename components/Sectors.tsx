@@ -10,8 +10,8 @@ const sectors = [
     image: "/HeroCarousel/asabaAirport.webp"
   },
   {
-    title: "Commercial",
-    description: "Creating innovative workspaces and retail environments that drive business growth and employee well-being.",
+    title: "Religious",
+    description: "Designing places of worship that inspire peace and community.",
     image: "/Industry/Commercial.png"
   },
   {
@@ -22,16 +22,16 @@ const sectors = [
   {
     title: "Healthcare",
     description: "Developing advanced medical facilities focused on patient care, safety, and operational efficiency.",
-    image: "/Industry/Healthcare.jpg"
+    image: "/MorePictures/Diagnotics hospital.webp"
   },
   {
     title: "Hospitality",
     description: "Designing luxurious hotels and resorts that offer unforgettable experiences and world-class comfort.",
-    image: "/WildCardPictures/Pearle Suites.jpg"
+    image: "/MorePictures/Hilton Garden.webp"
   },
   {
-    title: "Industrial",
-    description: "Engineering robust industrial complexes, warehouses, and manufacturing plants for maximum productivity.",
+    title: "Commercial",
+    description: "Creating innovative workspaces and retail environments that drive business growth and employee well-being.",
     image: "/Industry/Industrial.jpeg"
   },
   {

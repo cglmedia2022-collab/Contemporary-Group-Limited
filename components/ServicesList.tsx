@@ -7,7 +7,7 @@ const services = [
   {
     title: "Architectural Design & Space Planning",
     desc: "Delivering innovative and functional design concepts that optimize spatial efficiency while maintaining stunning aesthetic appeal.",
-    img: "/WildCardPictures/design drawing.jpeg"
+    img: "/MorePictures/Warri City Stadium 2.jpeg"
   },
   {
     title: "Contractor Finance Structuring",
@@ -17,12 +17,12 @@ const services = [
   {
     title: "Interior Design & Fit-Out Solutions",
     desc: "Crafting bespoke interior environments that reflect the identity of the occupants through meticulous material selection and execution.",
-    img: "/WildCardPictures/Pearle Suites.jpg"
+    img: "/MorePictures/Interior Design 2.jpeg"
   },
   {
     title: "Procurement & Logistics Management",
     desc: "Streamlining the supply chain to ensure the timely and cost-effective delivery of high-quality materials and construction resources.",
-    img: "/HeroCarousel/Consturction Site.jpeg"
+    img: "/MorePictures/Construction.png"
   },
   {
     title: "Project & Construction Management",
@@ -37,7 +37,7 @@ const services = [
   {
     title: "Project Management",
     desc: "Comprehensive lifecycle planning, risk mitigation, and stakeholder coordination ensuring successful project delivery.",
-    img: "/HeroCarousel/ProjectManagement.jpeg"
+    img: "/MorePictures/Project Management.jpeg"
   }
 ];
 

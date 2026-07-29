@@ -6,13 +6,13 @@ import Link from "next/link";
 const operations = [
   {
     number: "01",
-    title: "Architectural Design & Project Management",
-    description: "From initial concept to final execution, we deliver visionary designs and provide rigorous management to ensure every detail is perfectly realized."
+    title: "Architectural & Allied Services Design",
+    description: "We provide comprehensive architectural planning and integrated engineering design, developing functional layouts and clear technical documentation from concept to construction."
   },
   {
     number: "02",
-    title: "Project Consultancy",
-    description: "Expert guidance across all phases of construction. We offer strategic insights, feasibility studies, and technical advice to maximize project value."
+    title: "Project Management",
+    description: "We coordinate construction activities from initiation to handover, managing project timelines, budgets, and on-site execution to ensure reliable and efficient delivery."
   },
   {
     number: "03",

@@ -35,12 +35,6 @@ const directors = [
     photo: "/Board of Directors/Paul Okomayin.jpeg",
     bio: "A graduate of Accountancy holding an MBA. Pioneer MD/CEO of STB Building Society and former Regional Director at Prudent Bank Plc. Brings deep real estate and financial expertise to the board.",
   },
-  {
-    name: "Samuel Ekene Ifeadi",
-    title: "Business Development Executive",
-    photo: "/Board of Directors/Samuel Ekene Ifeadi.jpeg",
-    bio: "With over 8 years of experience in B2B sales, strategic partnerships, and commercial growth. He holds a Bachelor’s degree in Economics from the University of Victoria and a Master’s in Management Innovation & Entrepreneurship from Queen’s University. Samuel brings a strong focus on client relationships, business visibility, and sustainable growth opportunities.",
-  },
 ];
 
 export default function BoardHero() {

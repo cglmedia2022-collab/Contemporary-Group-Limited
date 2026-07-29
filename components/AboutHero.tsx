@@ -16,52 +16,46 @@ export default function AboutHero() {
     <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-background">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         
-        {/* Top Text Section (About Us section) */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-12 md:mb-16">
-          {/* Left Headline */}
+        {/* Top Hero Section (Side-by-side Layout) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-20 md:mb-28">
+          {/* Left Column: Headline and Paragraph */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full md:w-1/2 space-y-4"
+            className="lg:col-span-6 space-y-6"
           >
-            <span className="font-gotham text-base md:text-lg uppercase tracking-[0.25em] text-foreground/80 font-light block mb-2">
-              Company Overview
-            </span>
-            <h1 className="font-gotham text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-foreground">
-              Shaping the Future of the Built Environment Since 1990.
-            </h1>
-          </motion.div>
-          
-          {/* Right Paragraph */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full md:w-5/12 pb-2"
-          >
-            <p className="font-sans text-sm md:text-base text-foreground/75 leading-relaxed">
+            <div>
+              <span className="font-gotham text-sm sm:text-base md:text-lg uppercase tracking-[0.25em] text-foreground/80 font-light block mb-3">
+                Company Overview
+              </span>
+              <h1 className="font-gotham text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-foreground">
+                Shaping the Future of the Built Environment Since 1990.
+              </h1>
+            </div>
+            
+            <p className="font-sans text-sm sm:text-base md:text-lg text-foreground/75 leading-relaxed max-w-2xl pt-2">
               Contemporary Group Limited is a dynamic leader in the construction industry, dedicated to creating the best building solutions for enduring value. Our journey began with a vision to provide unique solutions for exceptional projects, and today, we lead the industry in innovation and sustainability.
             </p>
           </motion.div>
-        </div>
 
-        {/* Large Hero Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="relative h-[400px] md:h-[600px] lg:h-[500px] w-full rounded-4xl md:rounded-[3rem] overflow-hidden shadow-xl mb-16 md:mb-24"
-        >
-          <Image
-            src="/HeroCarousel/v1-Copy-2.png"
-            alt="Contemporary Group Limited - Shaping the Built Environment"
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
-        </motion.div>
+          {/* Right Column: Hero Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="lg:col-span-6 relative h-96 sm:h-112.5 md:h-125 lg:h-137.5 w-full rounded-xl md:rounded-2xl overflow-hidden"
+          >
+            <Image
+              src="/WildCardPictures/CGL-Building-cropped.jpg"
+              alt="Contemporary Group Limited - Shaping the Built Environment"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
+            />
+          </motion.div>
+        </div>
 
         {/* Statistics Section (Moved directly under the About Us top section/image) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-24 md:mb-32">
@@ -77,7 +71,7 @@ export default function AboutHero() {
               <h3 className="font-gotham text-4xl md:text-5xl font-medium text-foreground tracking-tight">
                 <Counter target={stat.value} />
               </h3>
-              <p className="font-sans text-xs md:text-sm text-foreground/50 max-w-[160px] leading-relaxed">
+              <p className="font-sans text-xs md:text-sm text-foreground/50 max-w-40 leading-relaxed">
                 {stat.label}
               </p>
             </motion.div>
@@ -93,7 +87,7 @@ export default function AboutHero() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative h-[450px] md:h-[550px] w-full rounded-4xl overflow-hidden shadow-lg group bg-neutral-100"
+            className="relative h-112.5 md:h-137.5 w-full rounded-4xl overflow-hidden shadow-lg group bg-neutral-100"
           >
             <Image
               src="/HeroCarousel/ICC-1.png"
@@ -122,7 +116,7 @@ export default function AboutHero() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[450px] md:h-[550px] w-full rounded-4xl overflow-hidden shadow-lg group bg-neutral-100"
+            className="relative h-112.5 md:h-137.5 w-full rounded-4xl overflow-hidden shadow-lg group bg-neutral-100"
           >
             <Image
               src="/HeroCarousel/Aerial View of Leisure park.jpeg"

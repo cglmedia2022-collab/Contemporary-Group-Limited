@@ -23,7 +23,7 @@ export default function About() {
     {
       title: "Rigorous Technical Precision",
       desc: "Bridging beautiful design with advanced structural engineering to guarantee flawless, world-class precision.",
-      img: "/WildCardPictures/image-20.png"
+      img: "/MorePictures/Warri City Stadium 1.jpeg"
     },
     {
       title: "Sustainable Modern Innovation",
@@ -36,12 +36,12 @@ export default function About() {
     {
       name: "Contemporary Design Associates",
       desc: "Premier architectural consultancy, visual scripting, and schematic layout plans.",
-      img: "/WildCardPictures/design drawing.jpeg"
+      img: "/MorePictures/Warri City Stadium 13.jpeg"
     },
     {
       name: "Contemporary Properties Limited",
       desc: "Luxury residential developments, property management, and premium real estate solutions.",
-      img: "/HeroCarousel/v1-Copy-2.png"
+      img: "/WildCardPictures/Allied Towers.png"
     },
     {
       name: "Conwave Ventures Limited",
@@ -51,7 +51,7 @@ export default function About() {
     {
       name: "Contemporary Ventures & Resources",
       desc: "Global investments, project resource management, and international operations.",
-      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
+      img: "/MorePictures/Warri City Stadium 17.jpeg"
     }
   ];
 
@@ -71,10 +71,10 @@ export default function About() {
               <span className="text-brand-primary">Architecture &amp; Design Integrity.</span>
             </h2>
             <p className="font-sans text-sm text-foreground/70 leading-relaxed text-justify max-w-2xl">
-              Contemporary Group Limited (CGL) stands as a titan of architectural brilliance within Nigeria&apos;s built environment. For over three decades, we have anchored our legacy in visionary spatial design, conceptual draftsmanship, and high-fidelity planning—shaping structural masterworks that stand as benchmarks of aesthetic and technical excellence.
+              With over three decades of experience across Nigeria&apos;s built environment, Contemporary Group Limited (CGL) is dedicated to quality architectural planning, practical innovation, and reliable project execution. We combine structured planning with engineering excellence to deliver functional spaces of enduring value.
             </p>
             <p className="font-sans text-xs text-foreground/50 leading-relaxed text-justify max-w-2xl italic border-l-2 border-brand-primary pl-4">
-              &quot;Dedicated to creating exceptional architectural masterworks that unite spatial poetry with enduring, high-performance structural engineering.&quot;
+              &quot;Dedicated to delivering functional, high-quality building solutions through thoughtful design and dependable engineering.&quot;
             </p>
           </div>
 

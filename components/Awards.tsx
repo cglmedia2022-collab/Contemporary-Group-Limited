@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 
 const leftAwards = [
   {
-    title: "Distinguished Customer Award",
-    year: "2015",
-    awardedBy: "Fidelity Bank",
-    highlight: false
+    title: "Most Iconic Corporate Design",
+    year: "2024",
+    awardedBy: "Nigerian Institute of Architects",
+    highlight: true
   },
   {
     title: "Africa Week Leadership Award",
     year: "2010",
     awardedBy: "Africa Week",
-    highlight: true
+    highlight: false
   },
   {
     title: "Excellence in Property Dev. & Engineering Services",
@@ -31,10 +31,16 @@ const leftAwards = [
 
 const rightAwards = [
   {
+    title: "Most Iconic Corporate Building in Nigeria",
+    year: "2024",
+    awardedBy: "Certificate of Recognition",
+    highlight: true
+  },
+  {
     title: "World Class Architectural Design Consultants of the Year",
     year: "2008",
     awardedBy: "Nigeria",
-    highlight: true
+    highlight: false
   },
   {
     title: "Construction Industry Certificate of Recognition",
@@ -47,19 +53,13 @@ const rightAwards = [
     year: "2006",
     awardedBy: "Nigeria Real Estate Awards (NIREA)",
     highlight: false
-  },
-  {
-    title: "Most Iconic Corporate Building in Nigeria",
-    year: "2024",
-    awardedBy: "Certificate of Recognition",
-    highlight: false
   }
 ];
 
 const featuredAward = {
-  title: "Most Iconic Corporate Design",
-  year: "2024",
-  awardedBy: "Nigerian Institute of Architects",
+  title: "Distinguished Customer Award",
+  year: "2015",
+  awardedBy: "Fidelity Bank",
   highlight: false
 };
 

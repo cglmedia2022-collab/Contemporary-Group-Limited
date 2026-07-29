@@ -43,7 +43,7 @@ export default function ServicesHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="relative h-[400px] md:h-[600px] lg:h-[500px] w-full rounded-4xl md:rounded-[3rem] overflow-hidden shadow-xl"
+          className="relative h-100 md:h-150 lg:h-125 w-full rounded-4xl md:rounded-[3rem] overflow-hidden shadow-xl"
         >
           <Image
             src="/WildCardPictures/State-Sec.jpeg"

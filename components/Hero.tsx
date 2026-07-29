@@ -38,13 +38,13 @@ const slides = [
   },
   {
     id: 5,
-    image: "/HeroCarousel/Consturction Site.jpeg",
+    image: "/MorePictures/Construction.png",
     heading: "Comprehensive Engineering Solutions.",
     subtext: "Top-tier civil, structural, and MEP engineering ensuring absolute project integrity."
   },
   {
     id: 6,
-    image: "/HeroCarousel/ProjectManagement.jpeg",
+    image: "/MorePictures/Project Management.jpeg",
     heading: "Expert Project Management Resources.",
     subtext: "Guaranteed effective project delivery, seamlessly guiding you from inception to completion."
   },
