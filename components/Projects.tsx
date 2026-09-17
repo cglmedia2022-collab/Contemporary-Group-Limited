@@ -81,7 +81,7 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="group cursor-pointer relative aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
             >
-              <Link href="/projects/delta-state-secretariat" className="absolute inset-0 z-20" aria-label="View Delta State Central Secretariat" />
+              <Link href="/projects/delta-state-central-secretariat" className="absolute inset-0 z-20" aria-label="View Delta State Central Secretariat" />
               <Image
                 src="/HeroCarousel/Aerial View of Secteriat.jpeg"
                 alt="Delta State Central Secretariat"
@@ -174,7 +174,7 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="group cursor-pointer relative aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
             >
-              <Link href="/projects/international-conference-centre" className="absolute inset-0 z-20" aria-label="View International Conference Centre" />
+              <Link href="/projects/international-conference-centre-asaba" className="absolute inset-0 z-20" aria-label="View International Conference Centre" />
               <Image
                 src="/HeroCarousel/ICC-1.png"
                 alt="International Conference Centre"
@@ -219,10 +219,10 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="group cursor-pointer relative aspect-4/3 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800"
             >
-              <Link href="/projects/nigerian-law-school-yenagoa" className="absolute inset-0 z-20" aria-label="View Nigerian Law School Yenagoa" />
+              <Link href="/projects/faculty-of-environmental-sciences-owa-alero-campus-agbor" className="absolute inset-0 z-20" aria-label="View Faculty of Environmental Sciences, Owa Alero Campus, Agbor" />
               <Image
-                src="/Industry/Education.jpeg"
-                alt="Nigerian Law School Yenagoa Campus"
+                src="/WildCardPictures/Faculty of Environmental Sciences.jpg"
+                alt="Faculty of Environmental Sciences, Owa Alero Campus, Agbor"
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 33vw"
@@ -234,7 +234,7 @@ export default function Projects() {
                     Education
                   </span>
                   <h3 className="font-gotham text-base font-bold text-white mt-1">
-                    Nigerian Law School Yenagoa
+                    Faculty of Environmental Sciences, Owa Alero Campus, Agbor
                   </h3>
                 </div>
                 <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/20 group-hover:bg-white group-hover:text-black transition-colors duration-300">

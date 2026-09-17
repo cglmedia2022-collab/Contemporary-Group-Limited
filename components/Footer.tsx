@@ -65,7 +65,7 @@ export default function Footer() {
                 Company Overview
               </Link>
               <Link
-                href="/about/members"
+                href="/about/members-of-group"
                 className="text-xs text-foreground/60 hover:text-brand-primary transition-colors"
               >
                 Group Members

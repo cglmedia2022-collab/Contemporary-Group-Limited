@@ -32,13 +32,13 @@ const members = [
     description:
       "Incorporated in 1990, CPL began as an architectural consultancy and evolved into a full-spectrum property development company. With over 32 years of experience, CPL has been involved in the construction and development of top-class properties across Nigeria, becoming a foremost player in the building industry.",
     notableProjects: [
-      "Hilton Garden Inn — Lagos",
-      "Orchid Hotel — Asaba & Lagos",
-      "Zenith Bank branches — Nationwide",
-      "Block of Luxury Flats — Queens Drive, Ikoyi",
-      "Ebeano Mall — Lekki",
+      "Luxury Flats at Queen's Drive, Ikoyi, Lagos",
+      "4 Points by Sheraton, Asaba, Delta State",
+      "24-Storey Mixed Development, 16 Alexander, Ikoyi, Lagos",
+      "Allied Towers — 11-Storey Apartment Building",
+      "Pearl Suites",
     ],
-    image: "/WildCardPictures/4 Points By Sheraton, Asaba, Delta State (Ongoing)..jpg",
+    image: "/WildCardPictures/Pearle Suites.jpg",
   },
   {
     name: "Contemporary Ventures & Resources Limited",
@@ -127,6 +127,7 @@ export default function MembersHero() {
             {members.map((member, idx) => (
               <motion.div
                 key={member.abbr}
+                id={member.abbr}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

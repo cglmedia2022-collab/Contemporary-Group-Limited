@@ -7,7 +7,7 @@ const services = [
   {
     title: "Architectural Design & Space Planning",
     desc: "Delivering innovative and functional design concepts that optimize spatial efficiency while maintaining stunning aesthetic appeal.",
-    img: "/MorePictures/Warri City Stadium 2.jpeg"
+    img: "/MorePictures/Warri City Stadium 1.jpeg"
   },
   {
     title: "Contractor Finance Structuring",

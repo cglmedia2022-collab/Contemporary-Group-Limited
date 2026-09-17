@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Counter from "@/components/Counter";
 
@@ -36,22 +37,26 @@ export default function About() {
     {
       name: "Contemporary Design Associates",
       desc: "Premier architectural consultancy, visual scripting, and schematic layout plans.",
-      img: "/MorePictures/Warri City Stadium 13.jpeg"
+      img: "/MorePictures/Warri City Stadium 13.jpeg",
+      href: "/about/members-of-group#CDA"
     },
     {
       name: "Contemporary Properties Limited",
       desc: "Luxury residential developments, property management, and premium real estate solutions.",
-      img: "/WildCardPictures/Allied Towers.png"
+      img: "/WildCardPictures/Allied Towers.png",
+      href: "/about/members-of-group#CPL"
     },
     {
       name: "Conwave Ventures Limited",
       desc: "Bespoke engineering solutions, technology integration, and concrete structures.",
-      img: "/HeroCarousel/Consturction Site.jpeg"
+      img: "/HeroCarousel/Consturction Site.jpeg",
+      href: "/about/members-of-group#CVL"
     },
     {
       name: "Contemporary Ventures & Resources",
       desc: "Global investments, project resource management, and international operations.",
-      img: "/MorePictures/Warri City Stadium 17.jpeg"
+      img: "/MorePictures/Warri City Stadium 17.jpeg",
+      href: "/about/members-of-group#CVR"
     }
   ];
 
@@ -200,45 +205,46 @@ export default function About() {
           {/* Subsidiaries Photo Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {subsidiaries.map((sub, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: i * 0.15 }}
-                className="group cursor-pointer relative aspect-4/5 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex flex-col justify-end p-6"
-              >
-                {/* Background Image with hover scale */}
-                <Image
-                  src={sub.img}
-                  alt={sub.name}
-                  fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                />
-                
-                {/* Dark Gradient Overlay */}
-                <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/40 to-transparent group-hover:via-neutral-950/60 transition-all duration-300" />
-                
-                {/* Info Content */}
-                <div className="relative z-10 space-y-2 translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                  <h3 className="font-gotham text-sm font-bold text-white leading-tight">
-                    {sub.name}
-                  </h3>
-                  <p className="font-sans text-[10px] text-white/60 leading-relaxed text-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out delay-100">
-                    {sub.desc}
-                  </p>
+              <Link key={i} href={sub.href}>
+                <motion.div 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: i * 0.15 }}
+                  className="group cursor-pointer relative aspect-4/5 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex flex-col justify-end p-6"
+                >
+                  {/* Background Image with hover scale */}
+                  <Image
+                    src={sub.img}
+                    alt={sub.name}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  />
                   
-                  {/* Arrow Indicator */}
-                  <div className="flex justify-end pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out delay-150">
-                    <div className="w-6 h-6 rounded-full bg-brand-primary flex items-center justify-center text-white">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                      </svg>
+                  {/* Dark Gradient Overlay */}
+                  <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/40 to-transparent group-hover:via-neutral-950/60 transition-all duration-300" />
+                  
+                  {/* Info Content */}
+                  <div className="relative z-10 space-y-2 translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                    <h3 className="font-gotham text-sm font-bold text-white leading-tight">
+                      {sub.name}
+                    </h3>
+                    <p className="font-sans text-[10px] text-white/60 leading-relaxed text-start opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out delay-100">
+                      {sub.desc}
+                    </p>
+                    
+                    {/* Arrow Indicator */}
+                    <div className="flex justify-end pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out delay-150">
+                      <div className="w-6 h-6 rounded-full bg-brand-primary flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
