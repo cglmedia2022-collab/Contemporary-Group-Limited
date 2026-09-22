@@ -44,16 +44,21 @@ export default function AboutHero() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="lg:col-span-6 relative h-96 sm:h-112.5 md:h-125 lg:h-137.5 w-full rounded-xl md:rounded-2xl overflow-hidden"
+            className="lg:col-span-6 flex flex-col"
           >
-            <Image
-              src="/WildCardPictures/CGL-Building-cropped.jpg"
-              alt="Contemporary Group Limited - Shaping the Built Environment"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
+            <div className="relative h-96 sm:h-112.5 md:h-125 lg:h-137.5 w-full rounded-xl md:rounded-2xl overflow-hidden">
+              <Image
+                src="/WildCardPictures/CGL-Building-cropped.jpg"
+                alt="Contemporary Group Limited - Shaping the Built Environment"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
+            <p className="font-sans text-xs md:text-sm text-black mt-3 text-center tracking-wide">
+              Contemporary Group Headquarters
+            </p>
           </motion.div>
         </div>
 

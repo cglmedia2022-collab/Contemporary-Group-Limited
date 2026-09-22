@@ -4,6 +4,7 @@ import Sectors from '@/components/Sectors';
 import CoreOperations from '@/components/CoreOperations';
 import Awards from '@/components/Awards';
 import Blog from '@/components/Blog';
+import MediaHighlight from '@/components/MediaHighlight';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
@@ -20,6 +21,7 @@ export default function CompanyOverviewPage() {
       <CoreOperations />
       <Awards />
       <Blog />
+      <MediaHighlight />
       <CTA />
       <Footer />
     </main>

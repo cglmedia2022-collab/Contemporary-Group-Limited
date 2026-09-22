@@ -22,6 +22,71 @@ const galleryImages = [
 ];
 
 const mediaItems = [
+  // --- NEW: University of Delta Commissioning & Inspection by Governor Sheriff Oborevwori ---
+  {
+    id: 101,
+    src: "/MediaGallery/LIP_31.jpg",
+    title: "University of Delta Commissioning",
+    category: "Commissioning",
+    description: "Commissioning of facilities at the University of Delta by the Governor of Delta State, His Excellency Sheriff Oborevwori."
+  },
+  {
+    id: 102,
+    src: "/MediaGallery/LIP_46.jpg",
+    title: "University of Delta Commissioning Ceremony",
+    category: "Commissioning",
+    description: "The Governor of Delta State, His Excellency Sheriff Oborevwori, presides over the formal commissioning ceremony at the University of Delta."
+  },
+  {
+    id: 103,
+    src: "/MediaGallery/LIP_65.jpg",
+    title: "Governor's Inspection — University of Delta",
+    category: "Inspections",
+    description: "Governor Sheriff Oborevwori conducts an on-site inspection of completed facilities at the University of Delta."
+  },
+  {
+    id: 104,
+    src: "/MediaGallery/LIP_66.jpg",
+    title: "University of Delta Facility Tour",
+    category: "Inspections",
+    description: "Detailed facility tour led by Governor Sheriff Oborevwori during the inspection and commissioning of projects at the University of Delta."
+  },
+  {
+    id: 105,
+    src: "/MediaGallery/LIP_67.jpg",
+    title: "University of Delta Project Walk-Through",
+    category: "Inspections",
+    description: "Inspection walk-through of newly completed structures at the University of Delta by Governor Sheriff Oborevwori and project stakeholders."
+  },
+  {
+    id: 106,
+    src: "/MediaGallery/LIP_68.jpg",
+    title: "University of Delta Inaugural Event",
+    category: "Commissioning",
+    description: "Inaugural commissioning event at the University of Delta, graced by the Delta State Governor, His Excellency Sheriff Oborevwori."
+  },
+  {
+    id: 107,
+    src: "/MediaGallery/LIP_69.jpg",
+    title: "Governor Oborevwori at University of Delta",
+    category: "Commissioning",
+    description: "His Excellency Governor Sheriff Oborevwori at the University of Delta during the commissioning of Contemporary Group project deliverables."
+  },
+  {
+    id: 108,
+    src: "/MediaGallery/LIP_70.jpg",
+    title: "University of Delta Commissioning Highlights",
+    category: "Commissioning",
+    description: "Key highlights from the University of Delta commissioning, attended by Governor Sheriff Oborevwori of Delta State."
+  },
+  {
+    id: 109,
+    src: "/MediaGallery/LIP_71.jpg",
+    title: "University of Delta Final Inspection",
+    category: "Inspections",
+    description: "Final inspection and handover of completed University of Delta facilities, presided over by the Delta State Governor, His Excellency Sheriff Oborevwori."
+  },
+  // --- EXISTING MEDIA ITEMS ---
   {
     id: 1,
     src: "/MediaGallery/media-1.jpg",

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ProjectsHero from "@/components/ProjectsHero";
 import ProjectsFilter from "@/components/ProjectsFilter";
 import Blog from "@/components/Blog";
+import MediaHighlight from "@/components/MediaHighlight";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { getProjects } from "@/lib/fetchData";
@@ -21,6 +22,7 @@ export default async function ProjectsPage() {
       <ProjectsHero />
       <ProjectsFilter allProjects={allProjects} />
       <Blog />
+      <MediaHighlight />
       <CTA />
       <Footer />
     </main>

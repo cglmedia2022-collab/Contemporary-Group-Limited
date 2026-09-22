@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import TeamHero from "@/components/TeamHero";
 import GeneralStaff from "@/components/GeneralStaff";
 import Blog from "@/components/Blog";
+import MediaHighlight from "@/components/MediaHighlight";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ export default function TeamPage() {
       <TeamHero />
       <GeneralStaff />
       <Blog />
+      <MediaHighlight />
       <CTA />
       <Footer />
     </main>

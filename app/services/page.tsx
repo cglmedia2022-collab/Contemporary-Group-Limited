@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ServicesHero from '@/components/ServicesHero';
 import ServicesList from '@/components/ServicesList';
+import MediaHighlight from '@/components/MediaHighlight';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import Blog from '@/components/Blog';
@@ -16,6 +17,7 @@ export default function ServicesPage() {
       <ServicesHero />
       <ServicesList />
       <Blog/>
+      <MediaHighlight />
       <CTA />
       <Footer />
     </main>

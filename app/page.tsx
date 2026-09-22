@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
+import MediaHighlight from "@/components/MediaHighlight";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -31,6 +32,9 @@ export default function Home() {
       
       {/* Featured Blog Section */}
       <Blog />
+      
+      {/* Media Highlight Section */}
+      <MediaHighlight />
       
       {/* CTA Section */}
       <CTA />

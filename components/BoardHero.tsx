@@ -21,7 +21,7 @@ const directors = [
     name: "Arc. Olusola Ibitoye",
     title: "Executive Director",
     photo: "/Board of Directors/Arc. Olusola Ibitoye.jpeg",
-    bio: "Holds B.Sc and M.Sc in Architecture from the University of Ife. With over 25 years of experience in design and construction, he is a registered member of the Nigerian Institute of Architects, having joined Contemporary Properties in 2001.",
+    bio: "Holds B.Sc and M.Sc in Architecture from the University of Ife. With over 35 years of experience in design and construction, he is a registered member of the Nigerian Institute of Architects, having joined Contemporary Properties in 2001.",
   },
   {
     name: "Victor Ikechukwu Ifeadi",

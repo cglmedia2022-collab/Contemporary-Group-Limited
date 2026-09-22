@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import BoardHero from "@/components/BoardHero";
 import Blog from "@/components/Blog";
+import MediaHighlight from "@/components/MediaHighlight";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ export default function BoardOfDirectorsPage() {
     <main className="flex flex-col min-h-screen">
       <BoardHero />
       <Blog />
+      <MediaHighlight />
       <CTA />
       <Footer />
     </main>

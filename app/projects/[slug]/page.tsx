@@ -5,6 +5,7 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { getProjects } from "@/lib/fetchData";
 import Blog from "@/components/Blog";
+import MediaHighlight from "@/components/MediaHighlight";
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -93,6 +94,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </article>
       </main>
       <Blog/>
+      <MediaHighlight />
       <CTA />
       <Footer />
     </div>

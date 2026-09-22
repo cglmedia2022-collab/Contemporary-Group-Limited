@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import TechnicalPartnersHero from "@/components/TechnicalPartnersHero";
 import Blog from "@/components/Blog";
+import MediaHighlight from "@/components/MediaHighlight";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ export default function TechnicalPartnersPage() {
     <main className="flex flex-col min-h-screen">
       <TechnicalPartnersHero />
       <Blog />
+      <MediaHighlight />
       <CTA />
       <Footer />
     </main>
