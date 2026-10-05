@@ -6,6 +6,7 @@ import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
 import MediaHighlight from "@/components/MediaHighlight";
+import GlobalCompact from "@/components/GlobalCompact";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <Services />
       
       {/* Projects Section */}
+      <GlobalCompact />
       <Projects />
       
       {/* Clients Section */}

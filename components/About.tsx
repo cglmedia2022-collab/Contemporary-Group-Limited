@@ -54,7 +54,7 @@ export default function About() {
     },
     {
       name: "Contemporary Ventures & Resources",
-      desc: "Global investments, project resource management, and international operations.",
+      desc: "A Sustainability Solutions Company offering comprehensive services within the construction value chain.",
       img: "/MorePictures/Warri City Stadium 17.jpeg",
       href: "/about/members-of-group#CVR"
     }
